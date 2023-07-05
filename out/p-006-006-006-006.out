@@ -1,0 +1,1827 @@
+PANDA - Planning and Acting in a Network Decomposition Architecture
+Believe us: It's great, it's fantastic!
+
+PANDA Copyright (C) 2014-2018 Gregor Behnke, Pascal Bercher, Thomas Geier, Kadir
+Dede, Daniel Höller, Kristof Mickeleit, Matthias Englert
+This program comes with ABSOLUTELY NO WARRANTY
+This is free software, and you are welcome to redistribute it under certain
+conditions; run PANDA with -license for details.
+
+Main Developers:
+- Gregor Behnke, http://www.uni-ulm.de/in/ki/behnke
+- Daniel Höller, http://www.uni-ulm.de/in/ki/hoeller
+
+With many thanks to various further contributors.
+Run PANDA with the command line argument -contributors for an extensive list.
+
+Run it with -help for more information like available options.
+
+
+PANDA was called with: "domain.hddl in/p-006-006-006-006.hddl"
+
+
+Planner Configuration
+=====================
+Domain: domain.hddl
+Problem: in/p-006-006-006-006.hddl
+Output: none
+
+Planning Configuration
+======================
+	printGeneralInformation : true
+	printAdditionalData     : true
+	random seed             : 42
+	time limit (in seconds) : none
+
+	external programs:
+
+
+	Parsing Configuration
+	---------------------
+	Parser                : autodetect file-type
+	Expand Sort Hierarchy : true
+	ClosedWordAssumption  : true
+	CompileSHOPMethods    : true
+	Eliminate Equality    : true
+	Strip Hybridity       : true
+	Reduce General Tasks  : true
+	
+	Preprocessing Configuration
+	---------------------------
+	Compile negative preconditions    : true
+	Compile unit methods              : false
+	Compile order in methods          : false
+	Compile initial plan              : true
+	Ensure Methods Have Last Task     : false
+	Split independent parameters      : true
+	Remove unnecessary predicates     : true
+	Expand choiceless abstract tasks  : true
+	Domain Cleanup                    : true
+	Convert to SAS+                   : false
+	Grounded Reachability Analysis    : Planning Graph (mutex-free)
+	Grounded Task Decomposition Graph : Two Way TDG
+	Iterate reachability analysis     : true
+	Ground domain                     : true
+	Iterate reachability analysis     : true
+	Stop directly after grounding     : false
+	
+	Progression-search Configuration
+	--------------------------------
+	Search Algorithm                 : AStarActionsType(2.0)
+	Heuristic                        : hhRC(hFF)
+	Abstract task selection strategy : random
+	
+	Post-processing Configuration
+	-----------------------------
+	search status
+	search result
+	timings
+	statistics
+#0 "00 global:01:problem"="p-006-006-006-006.hddl";"00 global:00:domain"="domain.hddl"
+Parsing domain ... using HDDL parser ... done
+Preparing internal domain representation ... done.
+Initial domain
+	number of abstract tasks = 7
+	number of tasks = 22
+	number of decomposition methods = 14
+	number of predicates = 6
+	number of sorts = 5
+	number of tasks in largest method = 6
+	number of primitive SHOP tasks = 13
+	number of epsilon methods = 0
+	number of primitive tasks = 15
+	number of constants = 406
+Compiling negative preconditions ... done.
+	number of abstract tasks = 7
+	number of tasks = 22
+	number of decomposition methods = 14
+	number of predicates = 12
+	number of sorts = 5
+	number of tasks in largest method = 6
+	number of primitive SHOP tasks = 13
+	number of epsilon methods = 0
+	number of primitive tasks = 15
+	number of constants = 406
+Compiling split parameters ... done.
+	number of abstract tasks = 7
+	number of tasks = 22
+	number of decomposition methods = 14
+	number of predicates = 12
+	number of sorts = 5
+	number of tasks in largest method = 6
+	number of primitive SHOP tasks = 13
+	number of epsilon methods = 0
+	number of primitive tasks = 15
+	number of constants = 406
+Lifted reachability analysis and domain cleanup ... done.
+	number of abstract tasks = 7
+	number of tasks = 22
+	number of decomposition methods = 14
+	number of predicates = 8
+	number of sorts = 5
+	number of tasks in largest method = 6
+	number of primitive SHOP tasks = 13
+	number of epsilon methods = 0
+	number of primitive tasks = 15
+	number of constants = 406
+Grounded planning graph ... done in 507ms.
+	Number of Grounded Actions 20465
+	Number of Grounded Literals 2925
+	number of abstract tasks = 7
+	number of tasks = 22
+	number of decomposition methods = 14
+	number of predicates = 8
+	number of sorts = 5
+	number of tasks in largest method = 6
+	number of primitive SHOP tasks = 13
+	number of epsilon methods = 0
+	number of primitive tasks = 15
+	number of constants = 406
+Two Way TDG ... done.
+	number of abstract tasks = 7
+	number of tasks = 22
+	number of decomposition methods = 14
+	number of predicates = 8
+	number of sorts = 5
+	number of tasks in largest method = 6
+	number of primitive SHOP tasks = 13
+	number of epsilon methods = 0
+	number of primitive tasks = 15
+	number of constants = 406
+Grounding ... done.
+	number of abstract tasks = 370
+	number of tasks = 1483
+	number of decomposition methods = 834
+	number of predicates = 3667
+	number of sorts = 0
+	number of tasks in largest method = 6
+	number of primitive SHOP tasks = 801
+	number of epsilon methods = 0
+	number of primitive tasks = 1113
+	number of constants = 0
+Removing unnecessary predicates ... done.
+	number of abstract tasks = 370
+	number of tasks = 1483
+	number of decomposition methods = 834
+	number of predicates = 468
+	number of sorts = 0
+	number of tasks in largest method = 6
+	number of primitive SHOP tasks = 801
+	number of epsilon methods = 0
+	number of primitive tasks = 1113
+	number of constants = 0
+Omitting lifted reachability analysis ... 
+Grounded planning graph ... done in 42ms.
+	Number of Grounded Actions 1113
+	Number of Grounded Literals 468
+	number of abstract tasks = 370
+	number of tasks = 1483
+	number of decomposition methods = 834
+	number of predicates = 468
+	number of sorts = 0
+	number of tasks in largest method = 6
+	number of primitive SHOP tasks = 801
+	number of epsilon methods = 0
+	number of primitive tasks = 1113
+	number of constants = 0
+Two Way TDG ... done.
+	number of abstract tasks = 370
+	number of tasks = 1483
+	number of decomposition methods = 834
+	number of predicates = 468
+	number of sorts = 0
+	number of tasks in largest method = 6
+	number of primitive SHOP tasks = 801
+	number of epsilon methods = 0
+	number of primitive tasks = 1113
+	number of constants = 0
+Compiling expand choiceless abstract tasks ... done.
+	number of abstract tasks = 308
+	number of tasks = 1421
+	number of decomposition methods = 772
+	number of predicates = 468
+	number of sorts = 0
+	number of tasks in largest method = 4
+	number of primitive SHOP tasks = 801
+	number of epsilon methods = 0
+	number of primitive tasks = 1113
+	number of constants = 0
+Compiling initial plan ... done.
+	number of abstract tasks = 309
+	number of tasks = 1422
+	number of decomposition methods = 773
+	number of predicates = 468
+	number of sorts = 0
+	number of tasks in largest method = 63
+	number of primitive SHOP tasks = 801
+	number of epsilon methods = 0
+	number of primitive tasks = 1113
+	number of constants = 0
+Removing unnecessary predicates ... done.
+	number of abstract tasks = 309
+	number of tasks = 1422
+	number of decomposition methods = 773
+	number of predicates = 468
+	number of sorts = 0
+	number of tasks in largest method = 63
+	number of primitive SHOP tasks = 801
+	number of epsilon methods = 0
+	number of primitive tasks = 1113
+	number of constants = 0
+Omitting lifted reachability analysis ... 
+Grounded planning graph ... done in 15ms.
+	Number of Grounded Actions 1113
+	Number of Grounded Literals 468
+	number of abstract tasks = 309
+	number of tasks = 1422
+	number of decomposition methods = 773
+	number of predicates = 468
+	number of sorts = 0
+	number of tasks in largest method = 63
+	number of primitive SHOP tasks = 801
+	number of epsilon methods = 0
+	number of primitive tasks = 1113
+	number of constants = 0
+Two Way TDG ... done.
+	number of abstract tasks = 309
+	number of tasks = 1422
+	number of decomposition methods = 773
+	number of predicates = 468
+	number of sorts = 0
+	number of tasks in largest method = 63
+	number of primitive SHOP tasks = 801
+	number of epsilon methods = 0
+	number of primitive tasks = 1113
+	number of constants = 0
+Compiling expand choiceless abstract tasks ... done.
+	number of abstract tasks = 308
+	number of tasks = 1421
+	number of decomposition methods = 772
+	number of predicates = 468
+	number of sorts = 0
+	number of tasks in largest method = 4
+	number of primitive SHOP tasks = 801
+	number of epsilon methods = 0
+	number of primitive tasks = 1113
+	number of constants = 0
+Compiling initial plan ... done.
+	number of abstract tasks = 309
+	number of tasks = 1422
+	number of decomposition methods = 773
+	number of predicates = 468
+	number of sorts = 0
+	number of tasks in largest method = 63
+	number of primitive SHOP tasks = 801
+	number of epsilon methods = 0
+	number of primitive tasks = 1113
+	number of constants = 0
+Removing unnecessary predicates ... done.
+	number of abstract tasks = 309
+	number of tasks = 1422
+	number of decomposition methods = 773
+	number of predicates = 468
+	number of sorts = 0
+	number of tasks in largest method = 63
+	number of primitive SHOP tasks = 801
+	number of epsilon methods = 0
+	number of primitive tasks = 1113
+	number of constants = 0
+Tasks 1113 - 329
+Domain is acyclic: true
+Domain is mostly acyclic: true
+Domain is regular: false
+Domain is tail recursive: true
+Domain is totally ordered: true
+Domain has last task in all methods: true
+Time remaining for planner 9223372036854770385ms
+Reducing flat domain ... done.
+ - Reduced number of operators from 1113 to 1113
+ - Reduced number of state-bits from 468 to 468
+Generating Relaxed Composition Model ...
+Calculating top down reachability ...
+ - Found 1422 SCCs with up to 1 tasks.
+ - Reachability calculated in 5 ms.
+ - model has 1886 operators
+ - model has 3003 state features
+ - operators' mean count of (pre, add, del) = (2,05, 1,25, 0,25)
+ - effects' mean achiever count: 1,25
+ - effects' mean consumer count: 2,05
+
+Searching with 
+ - Priority Queue search routine
+ - A-Star search
+ - HTN heuristic:hhRelataxedComposition-with-hFF-EQ
+ - Abstract task choice: randomly
+ - time limit for search is 2147483647 sec
+
+Starting priority queue search
+nodes/sec: 8017 - generated nodes: 8105 - fringe size: 1348 - current modification depth: 376 - g(s)+h(s)= 461
+Found solution 1 length 551
+Number of nodes in final fringe: 2067
+Generated search nodes (total): 12011
+Search time: 1230 ms
+
+Found a solution:
+__top_10 @ __artificialTopCompilation__top_10
+SHOP_methodbuild-wall-2_2_precondition[n6,n5,l-1-0-0,l-2-0-0]
+build-row-3[?len2=n5,?d=e,?t=stone,?loc1=l-1-0-0,?len=n6,?loc2=l-1-0-1] @ buildrow[l-1-0-0,n6,e,stone]
+SHOP_methodbuild-row-3_8_precondition[e,n5,n6,l-1-0-0,l-1-0-1]
+build-row-2[?loc2=l-1-0-2,?d=e,?t=stone,?loc1=l-1-0-1,?len=n5,?len2=n4] @ buildrow[l-1-0-1,n5,e,stone]
+SHOP_methodbuild-row-2_7_precondition[l-1-0-2,n5,e,l-1-0-1,n4]
+place-block-abstract-1[?loc1=l-1-0-1,?t=stone] @ placeblockabstract[l-1-0-1,stone]
+SHOP_methodplace-block-abstract-1_9_precondition[l-1-0-1]
+placeblock[l-1-0-1,stone]
+build-row-2[?loc2=l-1-0-3,?d=e,?t=stone,?loc1=l-1-0-2,?len=n4,?len2=n3] @ buildrow[l-1-0-2,n4,e,stone]
+SHOP_methodbuild-row-2_7_precondition[l-1-0-3,n4,e,l-1-0-2,n3]
+place-block-abstract-1[?loc1=l-1-0-2,?t=stone] @ placeblockabstract[l-1-0-2,stone]
+SHOP_methodplace-block-abstract-1_9_precondition[l-1-0-2]
+placeblock[l-1-0-2,stone]
+build-row-2[?loc2=l-1-0-4,?d=e,?t=stone,?loc1=l-1-0-3,?len=n3,?len2=n2] @ buildrow[l-1-0-3,n3,e,stone]
+SHOP_methodbuild-row-2_7_precondition[l-1-0-4,n3,e,l-1-0-3,n2]
+place-block-abstract-1[?loc1=l-1-0-3,?t=stone] @ placeblockabstract[l-1-0-3,stone]
+SHOP_methodplace-block-abstract-1_9_precondition[l-1-0-3]
+placeblock[l-1-0-3,stone]
+build-row-2[?loc2=l-1-0-5,?d=e,?t=stone,?loc1=l-1-0-4,?len=n2,?len2=n1] @ buildrow[l-1-0-4,n2,e,stone]
+SHOP_methodbuild-row-2_7_precondition[l-1-0-5,n2,e,l-1-0-4,n1]
+place-block-abstract-1[?loc1=l-1-0-4,?t=stone] @ placeblockabstract[l-1-0-4,stone]
+SHOP_methodplace-block-abstract-1_9_precondition[l-1-0-4]
+placeblock[l-1-0-4,stone]
+SHOP_methodbuild-row-1_6_precondition[n1]
+place-block-abstract-1[?loc1=l-1-0-5,?t=stone] @ placeblockabstract[l-1-0-5,stone]
+SHOP_methodplace-block-abstract-1_9_precondition[l-1-0-5]
+placeblock[l-1-0-5,stone]
+place-block-abstract-1[?loc1=l-1-0-0,?t=stone] @ placeblockabstract[l-1-0-0,stone]
+SHOP_methodplace-block-abstract-1_9_precondition[l-1-0-0]
+placeblock[l-1-0-0,stone]
+SHOP_methodbuild-wall-2_2_precondition[n5,n4,l-2-0-0,l-3-0-0]
+build-row-3[?len2=n5,?d=e,?t=stone,?loc1=l-2-0-0,?len=n6,?loc2=l-2-0-1] @ buildrow[l-2-0-0,n6,e,stone]
+SHOP_methodbuild-row-3_8_precondition[e,n5,n6,l-2-0-0,l-2-0-1]
+build-row-2[?loc2=l-2-0-2,?d=e,?t=stone,?loc1=l-2-0-1,?len=n5,?len2=n4] @ buildrow[l-2-0-1,n5,e,stone]
+SHOP_methodbuild-row-2_7_precondition[l-2-0-2,n5,e,l-2-0-1,n4]
+place-block-abstract-1[?loc1=l-2-0-1,?t=stone] @ placeblockabstract[l-2-0-1,stone]
+SHOP_methodplace-block-abstract-1_9_precondition[l-2-0-1]
+placeblock[l-2-0-1,stone]
+build-row-2[?loc2=l-2-0-3,?d=e,?t=stone,?loc1=l-2-0-2,?len=n4,?len2=n3] @ buildrow[l-2-0-2,n4,e,stone]
+SHOP_methodbuild-row-2_7_precondition[l-2-0-3,n4,e,l-2-0-2,n3]
+place-block-abstract-1[?loc1=l-2-0-2,?t=stone] @ placeblockabstract[l-2-0-2,stone]
+SHOP_methodplace-block-abstract-1_9_precondition[l-2-0-2]
+placeblock[l-2-0-2,stone]
+build-row-3[?len2=n2,?d=e,?t=stone,?loc1=l-2-0-3,?len=n3,?loc2=l-2-0-4] @ buildrow[l-2-0-3,n3,e,stone]
+SHOP_methodbuild-row-3_8_precondition[e,n2,n3,l-2-0-3,l-2-0-4]
+build-row-3[?len2=n1,?d=e,?t=stone,?loc1=l-2-0-4,?len=n2,?loc2=l-2-0-5] @ buildrow[l-2-0-4,n2,e,stone]
+SHOP_methodbuild-row-3_8_precondition[e,n1,n2,l-2-0-4,l-2-0-5]
+SHOP_methodbuild-row-1_6_precondition[n1]
+place-block-abstract-1[?loc1=l-2-0-5,?t=stone] @ placeblockabstract[l-2-0-5,stone]
+SHOP_methodplace-block-abstract-1_9_precondition[l-2-0-5]
+placeblock[l-2-0-5,stone]
+place-block-abstract-1[?loc1=l-2-0-4,?t=stone] @ placeblockabstract[l-2-0-4,stone]
+SHOP_methodplace-block-abstract-1_9_precondition[l-2-0-4]
+placeblock[l-2-0-4,stone]
+place-block-abstract-1[?loc1=l-2-0-3,?t=stone] @ placeblockabstract[l-2-0-3,stone]
+SHOP_methodplace-block-abstract-1_9_precondition[l-2-0-3]
+placeblock[l-2-0-3,stone]
+place-block-abstract-1[?loc1=l-2-0-0,?t=stone] @ placeblockabstract[l-2-0-0,stone]
+SHOP_methodplace-block-abstract-1_9_precondition[l-2-0-0]
+placeblock[l-2-0-0,stone]
+SHOP_methodbuild-wall-2_2_precondition[n4,n3,l-3-0-0,l-4-0-0]
+build-row-3[?len2=n5,?d=e,?t=stone,?loc1=l-3-0-0,?len=n6,?loc2=l-3-0-1] @ buildrow[l-3-0-0,n6,e,stone]
+SHOP_methodbuild-row-3_8_precondition[e,n5,n6,l-3-0-0,l-3-0-1]
+build-row-2[?loc2=l-3-0-2,?d=e,?t=stone,?loc1=l-3-0-1,?len=n5,?len2=n4] @ buildrow[l-3-0-1,n5,e,stone]
+SHOP_methodbuild-row-2_7_precondition[l-3-0-2,n5,e,l-3-0-1,n4]
+place-block-abstract-1[?loc1=l-3-0-1,?t=stone] @ placeblockabstract[l-3-0-1,stone]
+SHOP_methodplace-block-abstract-1_9_precondition[l-3-0-1]
+placeblock[l-3-0-1,stone]
+build-row-2[?loc2=l-3-0-3,?d=e,?t=stone,?loc1=l-3-0-2,?len=n4,?len2=n3] @ buildrow[l-3-0-2,n4,e,stone]
+SHOP_methodbuild-row-2_7_precondition[l-3-0-3,n4,e,l-3-0-2,n3]
+place-block-abstract-1[?loc1=l-3-0-2,?t=stone] @ placeblockabstract[l-3-0-2,stone]
+SHOP_methodplace-block-abstract-1_9_precondition[l-3-0-2]
+placeblock[l-3-0-2,stone]
+build-row-2[?loc2=l-3-0-4,?d=e,?t=stone,?loc1=l-3-0-3,?len=n3,?len2=n2] @ buildrow[l-3-0-3,n3,e,stone]
+SHOP_methodbuild-row-2_7_precondition[l-3-0-4,n3,e,l-3-0-3,n2]
+place-block-abstract-1[?loc1=l-3-0-3,?t=stone] @ placeblockabstract[l-3-0-3,stone]
+SHOP_methodplace-block-abstract-1_9_precondition[l-3-0-3]
+placeblock[l-3-0-3,stone]
+build-row-2[?loc2=l-3-0-5,?d=e,?t=stone,?loc1=l-3-0-4,?len=n2,?len2=n1] @ buildrow[l-3-0-4,n2,e,stone]
+SHOP_methodbuild-row-2_7_precondition[l-3-0-5,n2,e,l-3-0-4,n1]
+place-block-abstract-1[?loc1=l-3-0-4,?t=stone] @ placeblockabstract[l-3-0-4,stone]
+SHOP_methodplace-block-abstract-1_9_precondition[l-3-0-4]
+placeblock[l-3-0-4,stone]
+SHOP_methodbuild-row-1_6_precondition[n1]
+place-block-abstract-1[?loc1=l-3-0-5,?t=stone] @ placeblockabstract[l-3-0-5,stone]
+SHOP_methodplace-block-abstract-1_9_precondition[l-3-0-5]
+placeblock[l-3-0-5,stone]
+place-block-abstract-1[?loc1=l-3-0-0,?t=stone] @ placeblockabstract[l-3-0-0,stone]
+SHOP_methodplace-block-abstract-1_9_precondition[l-3-0-0]
+placeblock[l-3-0-0,stone]
+SHOP_methodbuild-wall-2_2_precondition[n3,n2,l-4-0-0,l-5-0-0]
+build-row-3[?len2=n5,?d=e,?t=stone,?loc1=l-4-0-0,?len=n6,?loc2=l-4-0-1] @ buildrow[l-4-0-0,n6,e,stone]
+SHOP_methodbuild-row-3_8_precondition[e,n5,n6,l-4-0-0,l-4-0-1]
+build-row-3[?len2=n4,?d=e,?t=stone,?loc1=l-4-0-1,?len=n5,?loc2=l-4-0-2] @ buildrow[l-4-0-1,n5,e,stone]
+SHOP_methodbuild-row-3_8_precondition[e,n4,n5,l-4-0-1,l-4-0-2]
+build-row-2[?loc2=l-4-0-3,?d=e,?t=stone,?loc1=l-4-0-2,?len=n4,?len2=n3] @ buildrow[l-4-0-2,n4,e,stone]
+SHOP_methodbuild-row-2_7_precondition[l-4-0-3,n4,e,l-4-0-2,n3]
+place-block-abstract-1[?loc1=l-4-0-2,?t=stone] @ placeblockabstract[l-4-0-2,stone]
+SHOP_methodplace-block-abstract-1_9_precondition[l-4-0-2]
+placeblock[l-4-0-2,stone]
+build-row-2[?loc2=l-4-0-4,?d=e,?t=stone,?loc1=l-4-0-3,?len=n3,?len2=n2] @ buildrow[l-4-0-3,n3,e,stone]
+SHOP_methodbuild-row-2_7_precondition[l-4-0-4,n3,e,l-4-0-3,n2]
+place-block-abstract-1[?loc1=l-4-0-3,?t=stone] @ placeblockabstract[l-4-0-3,stone]
+SHOP_methodplace-block-abstract-1_9_precondition[l-4-0-3]
+placeblock[l-4-0-3,stone]
+build-row-2[?loc2=l-4-0-5,?d=e,?t=stone,?loc1=l-4-0-4,?len=n2,?len2=n1] @ buildrow[l-4-0-4,n2,e,stone]
+SHOP_methodbuild-row-2_7_precondition[l-4-0-5,n2,e,l-4-0-4,n1]
+place-block-abstract-1[?loc1=l-4-0-4,?t=stone] @ placeblockabstract[l-4-0-4,stone]
+SHOP_methodplace-block-abstract-1_9_precondition[l-4-0-4]
+placeblock[l-4-0-4,stone]
+SHOP_methodbuild-row-1_6_precondition[n1]
+place-block-abstract-1[?loc1=l-4-0-5,?t=stone] @ placeblockabstract[l-4-0-5,stone]
+SHOP_methodplace-block-abstract-1_9_precondition[l-4-0-5]
+placeblock[l-4-0-5,stone]
+place-block-abstract-1[?loc1=l-4-0-1,?t=stone] @ placeblockabstract[l-4-0-1,stone]
+SHOP_methodplace-block-abstract-1_9_precondition[l-4-0-1]
+placeblock[l-4-0-1,stone]
+place-block-abstract-1[?loc1=l-4-0-0,?t=stone] @ placeblockabstract[l-4-0-0,stone]
+SHOP_methodplace-block-abstract-1_9_precondition[l-4-0-0]
+placeblock[l-4-0-0,stone]
+SHOP_methodbuild-wall-2_2_precondition[n2,n1,l-5-0-0,l-6-0-0]
+build-row-3[?len2=n5,?d=e,?t=stone,?loc1=l-5-0-0,?len=n6,?loc2=l-5-0-1] @ buildrow[l-5-0-0,n6,e,stone]
+SHOP_methodbuild-row-3_8_precondition[e,n5,n6,l-5-0-0,l-5-0-1]
+build-row-2[?loc2=l-5-0-2,?d=e,?t=stone,?loc1=l-5-0-1,?len=n5,?len2=n4] @ buildrow[l-5-0-1,n5,e,stone]
+SHOP_methodbuild-row-2_7_precondition[l-5-0-2,n5,e,l-5-0-1,n4]
+place-block-abstract-1[?loc1=l-5-0-1,?t=stone] @ placeblockabstract[l-5-0-1,stone]
+SHOP_methodplace-block-abstract-1_9_precondition[l-5-0-1]
+placeblock[l-5-0-1,stone]
+build-row-2[?loc2=l-5-0-3,?d=e,?t=stone,?loc1=l-5-0-2,?len=n4,?len2=n3] @ buildrow[l-5-0-2,n4,e,stone]
+SHOP_methodbuild-row-2_7_precondition[l-5-0-3,n4,e,l-5-0-2,n3]
+place-block-abstract-1[?loc1=l-5-0-2,?t=stone] @ placeblockabstract[l-5-0-2,stone]
+SHOP_methodplace-block-abstract-1_9_precondition[l-5-0-2]
+placeblock[l-5-0-2,stone]
+build-row-2[?loc2=l-5-0-4,?d=e,?t=stone,?loc1=l-5-0-3,?len=n3,?len2=n2] @ buildrow[l-5-0-3,n3,e,stone]
+SHOP_methodbuild-row-2_7_precondition[l-5-0-4,n3,e,l-5-0-3,n2]
+place-block-abstract-1[?loc1=l-5-0-3,?t=stone] @ placeblockabstract[l-5-0-3,stone]
+SHOP_methodplace-block-abstract-1_9_precondition[l-5-0-3]
+placeblock[l-5-0-3,stone]
+build-row-3[?len2=n1,?d=e,?t=stone,?loc1=l-5-0-4,?len=n2,?loc2=l-5-0-5] @ buildrow[l-5-0-4,n2,e,stone]
+SHOP_methodbuild-row-3_8_precondition[e,n1,n2,l-5-0-4,l-5-0-5]
+SHOP_methodbuild-row-1_6_precondition[n1]
+place-block-abstract-1[?loc1=l-5-0-5,?t=stone] @ placeblockabstract[l-5-0-5,stone]
+SHOP_methodplace-block-abstract-1_9_precondition[l-5-0-5]
+placeblock[l-5-0-5,stone]
+place-block-abstract-1[?loc1=l-5-0-4,?t=stone] @ placeblockabstract[l-5-0-4,stone]
+SHOP_methodplace-block-abstract-1_9_precondition[l-5-0-4]
+placeblock[l-5-0-4,stone]
+place-block-abstract-1[?loc1=l-5-0-0,?t=stone] @ placeblockabstract[l-5-0-0,stone]
+SHOP_methodplace-block-abstract-1_9_precondition[l-5-0-0]
+placeblock[l-5-0-0,stone]
+SHOP_methodbuild-wall-1_1_precondition[n1]
+build-row-3[?len2=n5,?d=e,?t=stone,?loc1=l-6-0-0,?len=n6,?loc2=l-6-0-1] @ buildrow[l-6-0-0,n6,e,stone]
+SHOP_methodbuild-row-3_8_precondition[e,n5,n6,l-6-0-0,l-6-0-1]
+build-row-2[?loc2=l-6-0-2,?d=e,?t=stone,?loc1=l-6-0-1,?len=n5,?len2=n4] @ buildrow[l-6-0-1,n5,e,stone]
+SHOP_methodbuild-row-2_7_precondition[l-6-0-2,n5,e,l-6-0-1,n4]
+place-block-abstract-1[?loc1=l-6-0-1,?t=stone] @ placeblockabstract[l-6-0-1,stone]
+SHOP_methodplace-block-abstract-1_9_precondition[l-6-0-1]
+placeblock[l-6-0-1,stone]
+build-row-3[?len2=n3,?d=e,?t=stone,?loc1=l-6-0-2,?len=n4,?loc2=l-6-0-3] @ buildrow[l-6-0-2,n4,e,stone]
+SHOP_methodbuild-row-3_8_precondition[e,n3,n4,l-6-0-2,l-6-0-3]
+build-row-2[?loc2=l-6-0-4,?d=e,?t=stone,?loc1=l-6-0-3,?len=n3,?len2=n2] @ buildrow[l-6-0-3,n3,e,stone]
+SHOP_methodbuild-row-2_7_precondition[l-6-0-4,n3,e,l-6-0-3,n2]
+place-block-abstract-1[?loc1=l-6-0-3,?t=stone] @ placeblockabstract[l-6-0-3,stone]
+SHOP_methodplace-block-abstract-1_9_precondition[l-6-0-3]
+placeblock[l-6-0-3,stone]
+build-row-3[?len2=n1,?d=e,?t=stone,?loc1=l-6-0-4,?len=n2,?loc2=l-6-0-5] @ buildrow[l-6-0-4,n2,e,stone]
+SHOP_methodbuild-row-3_8_precondition[e,n1,n2,l-6-0-4,l-6-0-5]
+SHOP_methodbuild-row-1_6_precondition[n1]
+place-block-abstract-1[?loc1=l-6-0-5,?t=stone] @ placeblockabstract[l-6-0-5,stone]
+SHOP_methodplace-block-abstract-1_9_precondition[l-6-0-5]
+placeblock[l-6-0-5,stone]
+place-block-abstract-1[?loc1=l-6-0-4,?t=stone] @ placeblockabstract[l-6-0-4,stone]
+SHOP_methodplace-block-abstract-1_9_precondition[l-6-0-4]
+placeblock[l-6-0-4,stone]
+place-block-abstract-1[?loc1=l-6-0-2,?t=stone] @ placeblockabstract[l-6-0-2,stone]
+SHOP_methodplace-block-abstract-1_9_precondition[l-6-0-2]
+placeblock[l-6-0-2,stone]
+place-block-abstract-1[?loc1=l-6-0-0,?t=stone] @ placeblockabstract[l-6-0-0,stone]
+SHOP_methodplace-block-abstract-1_9_precondition[l-6-0-0]
+placeblock[l-6-0-0,stone]
+SHOP_methodbuild-wall-2_2_precondition[n6,n5,l-1-0-5,l-2-0-5]
+build-row-3[?len2=n5,?d=n,?t=stone,?loc1=l-1-0-5,?len=n6,?loc2=l-1-1-5] @ buildrow[l-1-0-5,n6,n,stone]
+SHOP_methodbuild-row-3_8_precondition[n,n5,n6,l-1-0-5,l-1-1-5]
+build-row-2[?loc2=l-1-2-5,?d=n,?t=stone,?loc1=l-1-1-5,?len=n5,?len2=n4] @ buildrow[l-1-1-5,n5,n,stone]
+SHOP_methodbuild-row-2_7_precondition[l-1-2-5,n5,n,l-1-1-5,n4]
+place-block-abstract-1[?loc1=l-1-1-5,?t=stone] @ placeblockabstract[l-1-1-5,stone]
+SHOP_methodplace-block-abstract-1_9_precondition[l-1-1-5]
+placeblock[l-1-1-5,stone]
+build-row-2[?loc2=l-1-3-5,?d=n,?t=stone,?loc1=l-1-2-5,?len=n4,?len2=n3] @ buildrow[l-1-2-5,n4,n,stone]
+SHOP_methodbuild-row-2_7_precondition[l-1-3-5,n4,n,l-1-2-5,n3]
+place-block-abstract-1[?loc1=l-1-2-5,?t=stone] @ placeblockabstract[l-1-2-5,stone]
+SHOP_methodplace-block-abstract-1_9_precondition[l-1-2-5]
+placeblock[l-1-2-5,stone]
+build-row-2[?loc2=l-1-4-5,?d=n,?t=stone,?loc1=l-1-3-5,?len=n3,?len2=n2] @ buildrow[l-1-3-5,n3,n,stone]
+SHOP_methodbuild-row-2_7_precondition[l-1-4-5,n3,n,l-1-3-5,n2]
+place-block-abstract-1[?loc1=l-1-3-5,?t=stone] @ placeblockabstract[l-1-3-5,stone]
+SHOP_methodplace-block-abstract-1_9_precondition[l-1-3-5]
+placeblock[l-1-3-5,stone]
+build-row-2[?loc2=l-1-5-5,?d=n,?t=stone,?loc1=l-1-4-5,?len=n2,?len2=n1] @ buildrow[l-1-4-5,n2,n,stone]
+SHOP_methodbuild-row-2_7_precondition[l-1-5-5,n2,n,l-1-4-5,n1]
+place-block-abstract-1[?loc1=l-1-4-5,?t=stone] @ placeblockabstract[l-1-4-5,stone]
+SHOP_methodplace-block-abstract-1_9_precondition[l-1-4-5]
+placeblock[l-1-4-5,stone]
+SHOP_methodbuild-row-1_6_precondition[n1]
+place-block-abstract-1[?loc1=l-1-5-5,?t=stone] @ placeblockabstract[l-1-5-5,stone]
+SHOP_methodplace-block-abstract-1_9_precondition[l-1-5-5]
+placeblock[l-1-5-5,stone]
+place-block-abstract-2[?loc1=l-1-0-5,?t=stone] @ placeblockabstract[l-1-0-5,stone]
+SHOP_methodplace-block-abstract-2_10_precondition[l-1-0-5,stone]
+SHOP_methodbuild-wall-2_2_precondition[n5,n4,l-2-0-5,l-3-0-5]
+build-row-2[?loc2=l-2-1-5,?d=n,?t=stone,?loc1=l-2-0-5,?len=n6,?len2=n5] @ buildrow[l-2-0-5,n6,n,stone]
+SHOP_methodbuild-row-2_7_precondition[l-2-1-5,n6,n,l-2-0-5,n5]
+place-block-abstract-2[?loc1=l-2-0-5,?t=stone] @ placeblockabstract[l-2-0-5,stone]
+SHOP_methodplace-block-abstract-2_10_precondition[l-2-0-5,stone]
+build-row-2[?loc2=l-2-2-5,?d=n,?t=stone,?loc1=l-2-1-5,?len=n5,?len2=n4] @ buildrow[l-2-1-5,n5,n,stone]
+SHOP_methodbuild-row-2_7_precondition[l-2-2-5,n5,n,l-2-1-5,n4]
+place-block-abstract-1[?loc1=l-2-1-5,?t=stone] @ placeblockabstract[l-2-1-5,stone]
+SHOP_methodplace-block-abstract-1_9_precondition[l-2-1-5]
+placeblock[l-2-1-5,stone]
+build-row-2[?loc2=l-2-3-5,?d=n,?t=stone,?loc1=l-2-2-5,?len=n4,?len2=n3] @ buildrow[l-2-2-5,n4,n,stone]
+SHOP_methodbuild-row-2_7_precondition[l-2-3-5,n4,n,l-2-2-5,n3]
+place-block-abstract-1[?loc1=l-2-2-5,?t=stone] @ placeblockabstract[l-2-2-5,stone]
+SHOP_methodplace-block-abstract-1_9_precondition[l-2-2-5]
+placeblock[l-2-2-5,stone]
+build-row-2[?loc2=l-2-4-5,?d=n,?t=stone,?loc1=l-2-3-5,?len=n3,?len2=n2] @ buildrow[l-2-3-5,n3,n,stone]
+SHOP_methodbuild-row-2_7_precondition[l-2-4-5,n3,n,l-2-3-5,n2]
+place-block-abstract-1[?loc1=l-2-3-5,?t=stone] @ placeblockabstract[l-2-3-5,stone]
+SHOP_methodplace-block-abstract-1_9_precondition[l-2-3-5]
+placeblock[l-2-3-5,stone]
+build-row-2[?loc2=l-2-5-5,?d=n,?t=stone,?loc1=l-2-4-5,?len=n2,?len2=n1] @ buildrow[l-2-4-5,n2,n,stone]
+SHOP_methodbuild-row-2_7_precondition[l-2-5-5,n2,n,l-2-4-5,n1]
+place-block-abstract-1[?loc1=l-2-4-5,?t=stone] @ placeblockabstract[l-2-4-5,stone]
+SHOP_methodplace-block-abstract-1_9_precondition[l-2-4-5]
+placeblock[l-2-4-5,stone]
+SHOP_methodbuild-row-1_6_precondition[n1]
+place-block-abstract-1[?loc1=l-2-5-5,?t=stone] @ placeblockabstract[l-2-5-5,stone]
+SHOP_methodplace-block-abstract-1_9_precondition[l-2-5-5]
+placeblock[l-2-5-5,stone]
+SHOP_methodbuild-wall-2_2_precondition[n4,n3,l-3-0-5,l-4-0-5]
+build-row-2[?loc2=l-3-1-5,?d=n,?t=stone,?loc1=l-3-0-5,?len=n6,?len2=n5] @ buildrow[l-3-0-5,n6,n,stone]
+SHOP_methodbuild-row-2_7_precondition[l-3-1-5,n6,n,l-3-0-5,n5]
+place-block-abstract-2[?loc1=l-3-0-5,?t=stone] @ placeblockabstract[l-3-0-5,stone]
+SHOP_methodplace-block-abstract-2_10_precondition[l-3-0-5,stone]
+build-row-2[?loc2=l-3-2-5,?d=n,?t=stone,?loc1=l-3-1-5,?len=n5,?len2=n4] @ buildrow[l-3-1-5,n5,n,stone]
+SHOP_methodbuild-row-2_7_precondition[l-3-2-5,n5,n,l-3-1-5,n4]
+place-block-abstract-1[?loc1=l-3-1-5,?t=stone] @ placeblockabstract[l-3-1-5,stone]
+SHOP_methodplace-block-abstract-1_9_precondition[l-3-1-5]
+placeblock[l-3-1-5,stone]
+build-row-2[?loc2=l-3-3-5,?d=n,?t=stone,?loc1=l-3-2-5,?len=n4,?len2=n3] @ buildrow[l-3-2-5,n4,n,stone]
+SHOP_methodbuild-row-2_7_precondition[l-3-3-5,n4,n,l-3-2-5,n3]
+place-block-abstract-1[?loc1=l-3-2-5,?t=stone] @ placeblockabstract[l-3-2-5,stone]
+SHOP_methodplace-block-abstract-1_9_precondition[l-3-2-5]
+placeblock[l-3-2-5,stone]
+build-row-2[?loc2=l-3-4-5,?d=n,?t=stone,?loc1=l-3-3-5,?len=n3,?len2=n2] @ buildrow[l-3-3-5,n3,n,stone]
+SHOP_methodbuild-row-2_7_precondition[l-3-4-5,n3,n,l-3-3-5,n2]
+place-block-abstract-1[?loc1=l-3-3-5,?t=stone] @ placeblockabstract[l-3-3-5,stone]
+SHOP_methodplace-block-abstract-1_9_precondition[l-3-3-5]
+placeblock[l-3-3-5,stone]
+build-row-2[?loc2=l-3-5-5,?d=n,?t=stone,?loc1=l-3-4-5,?len=n2,?len2=n1] @ buildrow[l-3-4-5,n2,n,stone]
+SHOP_methodbuild-row-2_7_precondition[l-3-5-5,n2,n,l-3-4-5,n1]
+place-block-abstract-1[?loc1=l-3-4-5,?t=stone] @ placeblockabstract[l-3-4-5,stone]
+SHOP_methodplace-block-abstract-1_9_precondition[l-3-4-5]
+placeblock[l-3-4-5,stone]
+SHOP_methodbuild-row-1_6_precondition[n1]
+place-block-abstract-1[?loc1=l-3-5-5,?t=stone] @ placeblockabstract[l-3-5-5,stone]
+SHOP_methodplace-block-abstract-1_9_precondition[l-3-5-5]
+placeblock[l-3-5-5,stone]
+SHOP_methodbuild-wall-2_2_precondition[n3,n2,l-4-0-5,l-5-0-5]
+build-row-2[?loc2=l-4-1-5,?d=n,?t=stone,?loc1=l-4-0-5,?len=n6,?len2=n5] @ buildrow[l-4-0-5,n6,n,stone]
+SHOP_methodbuild-row-2_7_precondition[l-4-1-5,n6,n,l-4-0-5,n5]
+place-block-abstract-2[?loc1=l-4-0-5,?t=stone] @ placeblockabstract[l-4-0-5,stone]
+SHOP_methodplace-block-abstract-2_10_precondition[l-4-0-5,stone]
+build-row-2[?loc2=l-4-2-5,?d=n,?t=stone,?loc1=l-4-1-5,?len=n5,?len2=n4] @ buildrow[l-4-1-5,n5,n,stone]
+SHOP_methodbuild-row-2_7_precondition[l-4-2-5,n5,n,l-4-1-5,n4]
+place-block-abstract-1[?loc1=l-4-1-5,?t=stone] @ placeblockabstract[l-4-1-5,stone]
+SHOP_methodplace-block-abstract-1_9_precondition[l-4-1-5]
+placeblock[l-4-1-5,stone]
+build-row-2[?loc2=l-4-3-5,?d=n,?t=stone,?loc1=l-4-2-5,?len=n4,?len2=n3] @ buildrow[l-4-2-5,n4,n,stone]
+SHOP_methodbuild-row-2_7_precondition[l-4-3-5,n4,n,l-4-2-5,n3]
+place-block-abstract-1[?loc1=l-4-2-5,?t=stone] @ placeblockabstract[l-4-2-5,stone]
+SHOP_methodplace-block-abstract-1_9_precondition[l-4-2-5]
+placeblock[l-4-2-5,stone]
+build-row-2[?loc2=l-4-4-5,?d=n,?t=stone,?loc1=l-4-3-5,?len=n3,?len2=n2] @ buildrow[l-4-3-5,n3,n,stone]
+SHOP_methodbuild-row-2_7_precondition[l-4-4-5,n3,n,l-4-3-5,n2]
+place-block-abstract-1[?loc1=l-4-3-5,?t=stone] @ placeblockabstract[l-4-3-5,stone]
+SHOP_methodplace-block-abstract-1_9_precondition[l-4-3-5]
+placeblock[l-4-3-5,stone]
+build-row-2[?loc2=l-4-5-5,?d=n,?t=stone,?loc1=l-4-4-5,?len=n2,?len2=n1] @ buildrow[l-4-4-5,n2,n,stone]
+SHOP_methodbuild-row-2_7_precondition[l-4-5-5,n2,n,l-4-4-5,n1]
+place-block-abstract-1[?loc1=l-4-4-5,?t=stone] @ placeblockabstract[l-4-4-5,stone]
+SHOP_methodplace-block-abstract-1_9_precondition[l-4-4-5]
+placeblock[l-4-4-5,stone]
+SHOP_methodbuild-row-1_6_precondition[n1]
+place-block-abstract-1[?loc1=l-4-5-5,?t=stone] @ placeblockabstract[l-4-5-5,stone]
+SHOP_methodplace-block-abstract-1_9_precondition[l-4-5-5]
+placeblock[l-4-5-5,stone]
+SHOP_methodbuild-wall-2_2_precondition[n2,n1,l-5-0-5,l-6-0-5]
+build-row-2[?loc2=l-5-1-5,?d=n,?t=stone,?loc1=l-5-0-5,?len=n6,?len2=n5] @ buildrow[l-5-0-5,n6,n,stone]
+SHOP_methodbuild-row-2_7_precondition[l-5-1-5,n6,n,l-5-0-5,n5]
+place-block-abstract-2[?loc1=l-5-0-5,?t=stone] @ placeblockabstract[l-5-0-5,stone]
+SHOP_methodplace-block-abstract-2_10_precondition[l-5-0-5,stone]
+build-row-2[?loc2=l-5-2-5,?d=n,?t=stone,?loc1=l-5-1-5,?len=n5,?len2=n4] @ buildrow[l-5-1-5,n5,n,stone]
+SHOP_methodbuild-row-2_7_precondition[l-5-2-5,n5,n,l-5-1-5,n4]
+place-block-abstract-1[?loc1=l-5-1-5,?t=stone] @ placeblockabstract[l-5-1-5,stone]
+SHOP_methodplace-block-abstract-1_9_precondition[l-5-1-5]
+placeblock[l-5-1-5,stone]
+build-row-2[?loc2=l-5-3-5,?d=n,?t=stone,?loc1=l-5-2-5,?len=n4,?len2=n3] @ buildrow[l-5-2-5,n4,n,stone]
+SHOP_methodbuild-row-2_7_precondition[l-5-3-5,n4,n,l-5-2-5,n3]
+place-block-abstract-1[?loc1=l-5-2-5,?t=stone] @ placeblockabstract[l-5-2-5,stone]
+SHOP_methodplace-block-abstract-1_9_precondition[l-5-2-5]
+placeblock[l-5-2-5,stone]
+build-row-2[?loc2=l-5-4-5,?d=n,?t=stone,?loc1=l-5-3-5,?len=n3,?len2=n2] @ buildrow[l-5-3-5,n3,n,stone]
+SHOP_methodbuild-row-2_7_precondition[l-5-4-5,n3,n,l-5-3-5,n2]
+place-block-abstract-1[?loc1=l-5-3-5,?t=stone] @ placeblockabstract[l-5-3-5,stone]
+SHOP_methodplace-block-abstract-1_9_precondition[l-5-3-5]
+placeblock[l-5-3-5,stone]
+build-row-2[?loc2=l-5-5-5,?d=n,?t=stone,?loc1=l-5-4-5,?len=n2,?len2=n1] @ buildrow[l-5-4-5,n2,n,stone]
+SHOP_methodbuild-row-2_7_precondition[l-5-5-5,n2,n,l-5-4-5,n1]
+place-block-abstract-1[?loc1=l-5-4-5,?t=stone] @ placeblockabstract[l-5-4-5,stone]
+SHOP_methodplace-block-abstract-1_9_precondition[l-5-4-5]
+placeblock[l-5-4-5,stone]
+SHOP_methodbuild-row-1_6_precondition[n1]
+place-block-abstract-1[?loc1=l-5-5-5,?t=stone] @ placeblockabstract[l-5-5-5,stone]
+SHOP_methodplace-block-abstract-1_9_precondition[l-5-5-5]
+placeblock[l-5-5-5,stone]
+SHOP_methodbuild-wall-1_1_precondition[n1]
+build-row-2[?loc2=l-6-1-5,?d=n,?t=stone,?loc1=l-6-0-5,?len=n6,?len2=n5] @ buildrow[l-6-0-5,n6,n,stone]
+SHOP_methodbuild-row-2_7_precondition[l-6-1-5,n6,n,l-6-0-5,n5]
+place-block-abstract-2[?loc1=l-6-0-5,?t=stone] @ placeblockabstract[l-6-0-5,stone]
+SHOP_methodplace-block-abstract-2_10_precondition[l-6-0-5,stone]
+build-row-2[?loc2=l-6-2-5,?d=n,?t=stone,?loc1=l-6-1-5,?len=n5,?len2=n4] @ buildrow[l-6-1-5,n5,n,stone]
+SHOP_methodbuild-row-2_7_precondition[l-6-2-5,n5,n,l-6-1-5,n4]
+place-block-abstract-1[?loc1=l-6-1-5,?t=stone] @ placeblockabstract[l-6-1-5,stone]
+SHOP_methodplace-block-abstract-1_9_precondition[l-6-1-5]
+placeblock[l-6-1-5,stone]
+build-row-2[?loc2=l-6-3-5,?d=n,?t=stone,?loc1=l-6-2-5,?len=n4,?len2=n3] @ buildrow[l-6-2-5,n4,n,stone]
+SHOP_methodbuild-row-2_7_precondition[l-6-3-5,n4,n,l-6-2-5,n3]
+place-block-abstract-1[?loc1=l-6-2-5,?t=stone] @ placeblockabstract[l-6-2-5,stone]
+SHOP_methodplace-block-abstract-1_9_precondition[l-6-2-5]
+placeblock[l-6-2-5,stone]
+build-row-2[?loc2=l-6-4-5,?d=n,?t=stone,?loc1=l-6-3-5,?len=n3,?len2=n2] @ buildrow[l-6-3-5,n3,n,stone]
+SHOP_methodbuild-row-2_7_precondition[l-6-4-5,n3,n,l-6-3-5,n2]
+place-block-abstract-1[?loc1=l-6-3-5,?t=stone] @ placeblockabstract[l-6-3-5,stone]
+SHOP_methodplace-block-abstract-1_9_precondition[l-6-3-5]
+placeblock[l-6-3-5,stone]
+build-row-3[?len2=n1,?d=n,?t=stone,?loc1=l-6-4-5,?len=n2,?loc2=l-6-5-5] @ buildrow[l-6-4-5,n2,n,stone]
+SHOP_methodbuild-row-3_8_precondition[n,n1,n2,l-6-4-5,l-6-5-5]
+SHOP_methodbuild-row-1_6_precondition[n1]
+place-block-abstract-1[?loc1=l-6-5-5,?t=stone] @ placeblockabstract[l-6-5-5,stone]
+SHOP_methodplace-block-abstract-1_9_precondition[l-6-5-5]
+placeblock[l-6-5-5,stone]
+place-block-abstract-1[?loc1=l-6-4-5,?t=stone] @ placeblockabstract[l-6-4-5,stone]
+SHOP_methodplace-block-abstract-1_9_precondition[l-6-4-5]
+placeblock[l-6-4-5,stone]
+SHOP_methodbuild-wall-2_2_precondition[n6,n5,l-1-5-5,l-2-5-5]
+build-row-3[?len2=n5,?d=w,?t=stone,?loc1=l-1-5-5,?len=n6,?loc2=l-1-5-4] @ buildrow[l-1-5-5,n6,w,stone]
+SHOP_methodbuild-row-3_8_precondition[w,n5,n6,l-1-5-5,l-1-5-4]
+build-row-3[?len2=n4,?d=w,?t=stone,?loc1=l-1-5-4,?len=n5,?loc2=l-1-5-3] @ buildrow[l-1-5-4,n5,w,stone]
+SHOP_methodbuild-row-3_8_precondition[w,n4,n5,l-1-5-4,l-1-5-3]
+build-row-2[?loc2=l-1-5-2,?d=w,?t=stone,?loc1=l-1-5-3,?len=n4,?len2=n3] @ buildrow[l-1-5-3,n4,w,stone]
+SHOP_methodbuild-row-2_7_precondition[l-1-5-2,n4,w,l-1-5-3,n3]
+place-block-abstract-1[?loc1=l-1-5-3,?t=stone] @ placeblockabstract[l-1-5-3,stone]
+SHOP_methodplace-block-abstract-1_9_precondition[l-1-5-3]
+placeblock[l-1-5-3,stone]
+build-row-2[?loc2=l-1-5-1,?d=w,?t=stone,?loc1=l-1-5-2,?len=n3,?len2=n2] @ buildrow[l-1-5-2,n3,w,stone]
+SHOP_methodbuild-row-2_7_precondition[l-1-5-1,n3,w,l-1-5-2,n2]
+place-block-abstract-1[?loc1=l-1-5-2,?t=stone] @ placeblockabstract[l-1-5-2,stone]
+SHOP_methodplace-block-abstract-1_9_precondition[l-1-5-2]
+placeblock[l-1-5-2,stone]
+build-row-2[?loc2=l-1-5-0,?d=w,?t=stone,?loc1=l-1-5-1,?len=n2,?len2=n1] @ buildrow[l-1-5-1,n2,w,stone]
+SHOP_methodbuild-row-2_7_precondition[l-1-5-0,n2,w,l-1-5-1,n1]
+place-block-abstract-1[?loc1=l-1-5-1,?t=stone] @ placeblockabstract[l-1-5-1,stone]
+SHOP_methodplace-block-abstract-1_9_precondition[l-1-5-1]
+placeblock[l-1-5-1,stone]
+SHOP_methodbuild-row-1_6_precondition[n1]
+place-block-abstract-1[?loc1=l-1-5-0,?t=stone] @ placeblockabstract[l-1-5-0,stone]
+SHOP_methodplace-block-abstract-1_9_precondition[l-1-5-0]
+placeblock[l-1-5-0,stone]
+place-block-abstract-1[?loc1=l-1-5-4,?t=stone] @ placeblockabstract[l-1-5-4,stone]
+SHOP_methodplace-block-abstract-1_9_precondition[l-1-5-4]
+placeblock[l-1-5-4,stone]
+place-block-abstract-2[?loc1=l-1-5-5,?t=stone] @ placeblockabstract[l-1-5-5,stone]
+SHOP_methodplace-block-abstract-2_10_precondition[l-1-5-5,stone]
+SHOP_methodbuild-wall-2_2_precondition[n5,n4,l-2-5-5,l-3-5-5]
+build-row-2[?loc2=l-2-5-4,?d=w,?t=stone,?loc1=l-2-5-5,?len=n6,?len2=n5] @ buildrow[l-2-5-5,n6,w,stone]
+SHOP_methodbuild-row-2_7_precondition[l-2-5-4,n6,w,l-2-5-5,n5]
+place-block-abstract-2[?loc1=l-2-5-5,?t=stone] @ placeblockabstract[l-2-5-5,stone]
+SHOP_methodplace-block-abstract-2_10_precondition[l-2-5-5,stone]
+build-row-2[?loc2=l-2-5-3,?d=w,?t=stone,?loc1=l-2-5-4,?len=n5,?len2=n4] @ buildrow[l-2-5-4,n5,w,stone]
+SHOP_methodbuild-row-2_7_precondition[l-2-5-3,n5,w,l-2-5-4,n4]
+place-block-abstract-1[?loc1=l-2-5-4,?t=stone] @ placeblockabstract[l-2-5-4,stone]
+SHOP_methodplace-block-abstract-1_9_precondition[l-2-5-4]
+placeblock[l-2-5-4,stone]
+build-row-2[?loc2=l-2-5-2,?d=w,?t=stone,?loc1=l-2-5-3,?len=n4,?len2=n3] @ buildrow[l-2-5-3,n4,w,stone]
+SHOP_methodbuild-row-2_7_precondition[l-2-5-2,n4,w,l-2-5-3,n3]
+place-block-abstract-1[?loc1=l-2-5-3,?t=stone] @ placeblockabstract[l-2-5-3,stone]
+SHOP_methodplace-block-abstract-1_9_precondition[l-2-5-3]
+placeblock[l-2-5-3,stone]
+build-row-2[?loc2=l-2-5-1,?d=w,?t=stone,?loc1=l-2-5-2,?len=n3,?len2=n2] @ buildrow[l-2-5-2,n3,w,stone]
+SHOP_methodbuild-row-2_7_precondition[l-2-5-1,n3,w,l-2-5-2,n2]
+place-block-abstract-1[?loc1=l-2-5-2,?t=stone] @ placeblockabstract[l-2-5-2,stone]
+SHOP_methodplace-block-abstract-1_9_precondition[l-2-5-2]
+placeblock[l-2-5-2,stone]
+build-row-2[?loc2=l-2-5-0,?d=w,?t=stone,?loc1=l-2-5-1,?len=n2,?len2=n1] @ buildrow[l-2-5-1,n2,w,stone]
+SHOP_methodbuild-row-2_7_precondition[l-2-5-0,n2,w,l-2-5-1,n1]
+place-block-abstract-1[?loc1=l-2-5-1,?t=stone] @ placeblockabstract[l-2-5-1,stone]
+SHOP_methodplace-block-abstract-1_9_precondition[l-2-5-1]
+placeblock[l-2-5-1,stone]
+SHOP_methodbuild-row-1_6_precondition[n1]
+place-block-abstract-1[?loc1=l-2-5-0,?t=stone] @ placeblockabstract[l-2-5-0,stone]
+SHOP_methodplace-block-abstract-1_9_precondition[l-2-5-0]
+placeblock[l-2-5-0,stone]
+SHOP_methodbuild-wall-2_2_precondition[n4,n3,l-3-5-5,l-4-5-5]
+build-row-3[?len2=n5,?d=w,?t=stone,?loc1=l-3-5-5,?len=n6,?loc2=l-3-5-4] @ buildrow[l-3-5-5,n6,w,stone]
+SHOP_methodbuild-row-3_8_precondition[w,n5,n6,l-3-5-5,l-3-5-4]
+build-row-2[?loc2=l-3-5-3,?d=w,?t=stone,?loc1=l-3-5-4,?len=n5,?len2=n4] @ buildrow[l-3-5-4,n5,w,stone]
+SHOP_methodbuild-row-2_7_precondition[l-3-5-3,n5,w,l-3-5-4,n4]
+place-block-abstract-1[?loc1=l-3-5-4,?t=stone] @ placeblockabstract[l-3-5-4,stone]
+SHOP_methodplace-block-abstract-1_9_precondition[l-3-5-4]
+placeblock[l-3-5-4,stone]
+build-row-2[?loc2=l-3-5-2,?d=w,?t=stone,?loc1=l-3-5-3,?len=n4,?len2=n3] @ buildrow[l-3-5-3,n4,w,stone]
+SHOP_methodbuild-row-2_7_precondition[l-3-5-2,n4,w,l-3-5-3,n3]
+place-block-abstract-1[?loc1=l-3-5-3,?t=stone] @ placeblockabstract[l-3-5-3,stone]
+SHOP_methodplace-block-abstract-1_9_precondition[l-3-5-3]
+placeblock[l-3-5-3,stone]
+build-row-2[?loc2=l-3-5-1,?d=w,?t=stone,?loc1=l-3-5-2,?len=n3,?len2=n2] @ buildrow[l-3-5-2,n3,w,stone]
+SHOP_methodbuild-row-2_7_precondition[l-3-5-1,n3,w,l-3-5-2,n2]
+place-block-abstract-1[?loc1=l-3-5-2,?t=stone] @ placeblockabstract[l-3-5-2,stone]
+SHOP_methodplace-block-abstract-1_9_precondition[l-3-5-2]
+placeblock[l-3-5-2,stone]
+build-row-2[?loc2=l-3-5-0,?d=w,?t=stone,?loc1=l-3-5-1,?len=n2,?len2=n1] @ buildrow[l-3-5-1,n2,w,stone]
+SHOP_methodbuild-row-2_7_precondition[l-3-5-0,n2,w,l-3-5-1,n1]
+place-block-abstract-1[?loc1=l-3-5-1,?t=stone] @ placeblockabstract[l-3-5-1,stone]
+SHOP_methodplace-block-abstract-1_9_precondition[l-3-5-1]
+placeblock[l-3-5-1,stone]
+SHOP_methodbuild-row-1_6_precondition[n1]
+place-block-abstract-1[?loc1=l-3-5-0,?t=stone] @ placeblockabstract[l-3-5-0,stone]
+SHOP_methodplace-block-abstract-1_9_precondition[l-3-5-0]
+placeblock[l-3-5-0,stone]
+place-block-abstract-2[?loc1=l-3-5-5,?t=stone] @ placeblockabstract[l-3-5-5,stone]
+SHOP_methodplace-block-abstract-2_10_precondition[l-3-5-5,stone]
+SHOP_methodbuild-wall-2_2_precondition[n3,n2,l-4-5-5,l-5-5-5]
+build-row-3[?len2=n5,?d=w,?t=stone,?loc1=l-4-5-5,?len=n6,?loc2=l-4-5-4] @ buildrow[l-4-5-5,n6,w,stone]
+SHOP_methodbuild-row-3_8_precondition[w,n5,n6,l-4-5-5,l-4-5-4]
+build-row-2[?loc2=l-4-5-3,?d=w,?t=stone,?loc1=l-4-5-4,?len=n5,?len2=n4] @ buildrow[l-4-5-4,n5,w,stone]
+SHOP_methodbuild-row-2_7_precondition[l-4-5-3,n5,w,l-4-5-4,n4]
+place-block-abstract-1[?loc1=l-4-5-4,?t=stone] @ placeblockabstract[l-4-5-4,stone]
+SHOP_methodplace-block-abstract-1_9_precondition[l-4-5-4]
+placeblock[l-4-5-4,stone]
+build-row-2[?loc2=l-4-5-2,?d=w,?t=stone,?loc1=l-4-5-3,?len=n4,?len2=n3] @ buildrow[l-4-5-3,n4,w,stone]
+SHOP_methodbuild-row-2_7_precondition[l-4-5-2,n4,w,l-4-5-3,n3]
+place-block-abstract-1[?loc1=l-4-5-3,?t=stone] @ placeblockabstract[l-4-5-3,stone]
+SHOP_methodplace-block-abstract-1_9_precondition[l-4-5-3]
+placeblock[l-4-5-3,stone]
+build-row-2[?loc2=l-4-5-1,?d=w,?t=stone,?loc1=l-4-5-2,?len=n3,?len2=n2] @ buildrow[l-4-5-2,n3,w,stone]
+SHOP_methodbuild-row-2_7_precondition[l-4-5-1,n3,w,l-4-5-2,n2]
+place-block-abstract-1[?loc1=l-4-5-2,?t=stone] @ placeblockabstract[l-4-5-2,stone]
+SHOP_methodplace-block-abstract-1_9_precondition[l-4-5-2]
+placeblock[l-4-5-2,stone]
+build-row-2[?loc2=l-4-5-0,?d=w,?t=stone,?loc1=l-4-5-1,?len=n2,?len2=n1] @ buildrow[l-4-5-1,n2,w,stone]
+SHOP_methodbuild-row-2_7_precondition[l-4-5-0,n2,w,l-4-5-1,n1]
+place-block-abstract-1[?loc1=l-4-5-1,?t=stone] @ placeblockabstract[l-4-5-1,stone]
+SHOP_methodplace-block-abstract-1_9_precondition[l-4-5-1]
+placeblock[l-4-5-1,stone]
+SHOP_methodbuild-row-1_6_precondition[n1]
+place-block-abstract-1[?loc1=l-4-5-0,?t=stone] @ placeblockabstract[l-4-5-0,stone]
+SHOP_methodplace-block-abstract-1_9_precondition[l-4-5-0]
+placeblock[l-4-5-0,stone]
+place-block-abstract-2[?loc1=l-4-5-5,?t=stone] @ placeblockabstract[l-4-5-5,stone]
+SHOP_methodplace-block-abstract-2_10_precondition[l-4-5-5,stone]
+SHOP_methodbuild-wall-2_2_precondition[n2,n1,l-5-5-5,l-6-5-5]
+build-row-2[?loc2=l-5-5-4,?d=w,?t=stone,?loc1=l-5-5-5,?len=n6,?len2=n5] @ buildrow[l-5-5-5,n6,w,stone]
+SHOP_methodbuild-row-2_7_precondition[l-5-5-4,n6,w,l-5-5-5,n5]
+place-block-abstract-2[?loc1=l-5-5-5,?t=stone] @ placeblockabstract[l-5-5-5,stone]
+SHOP_methodplace-block-abstract-2_10_precondition[l-5-5-5,stone]
+build-row-2[?loc2=l-5-5-3,?d=w,?t=stone,?loc1=l-5-5-4,?len=n5,?len2=n4] @ buildrow[l-5-5-4,n5,w,stone]
+SHOP_methodbuild-row-2_7_precondition[l-5-5-3,n5,w,l-5-5-4,n4]
+place-block-abstract-1[?loc1=l-5-5-4,?t=stone] @ placeblockabstract[l-5-5-4,stone]
+SHOP_methodplace-block-abstract-1_9_precondition[l-5-5-4]
+placeblock[l-5-5-4,stone]
+build-row-2[?loc2=l-5-5-2,?d=w,?t=stone,?loc1=l-5-5-3,?len=n4,?len2=n3] @ buildrow[l-5-5-3,n4,w,stone]
+SHOP_methodbuild-row-2_7_precondition[l-5-5-2,n4,w,l-5-5-3,n3]
+place-block-abstract-1[?loc1=l-5-5-3,?t=stone] @ placeblockabstract[l-5-5-3,stone]
+SHOP_methodplace-block-abstract-1_9_precondition[l-5-5-3]
+placeblock[l-5-5-3,stone]
+build-row-2[?loc2=l-5-5-1,?d=w,?t=stone,?loc1=l-5-5-2,?len=n3,?len2=n2] @ buildrow[l-5-5-2,n3,w,stone]
+SHOP_methodbuild-row-2_7_precondition[l-5-5-1,n3,w,l-5-5-2,n2]
+place-block-abstract-1[?loc1=l-5-5-2,?t=stone] @ placeblockabstract[l-5-5-2,stone]
+SHOP_methodplace-block-abstract-1_9_precondition[l-5-5-2]
+placeblock[l-5-5-2,stone]
+build-row-2[?loc2=l-5-5-0,?d=w,?t=stone,?loc1=l-5-5-1,?len=n2,?len2=n1] @ buildrow[l-5-5-1,n2,w,stone]
+SHOP_methodbuild-row-2_7_precondition[l-5-5-0,n2,w,l-5-5-1,n1]
+place-block-abstract-1[?loc1=l-5-5-1,?t=stone] @ placeblockabstract[l-5-5-1,stone]
+SHOP_methodplace-block-abstract-1_9_precondition[l-5-5-1]
+placeblock[l-5-5-1,stone]
+SHOP_methodbuild-row-1_6_precondition[n1]
+place-block-abstract-1[?loc1=l-5-5-0,?t=stone] @ placeblockabstract[l-5-5-0,stone]
+SHOP_methodplace-block-abstract-1_9_precondition[l-5-5-0]
+placeblock[l-5-5-0,stone]
+SHOP_methodbuild-wall-1_1_precondition[n1]
+build-row-3[?len2=n5,?d=w,?t=stone,?loc1=l-6-5-5,?len=n6,?loc2=l-6-5-4] @ buildrow[l-6-5-5,n6,w,stone]
+SHOP_methodbuild-row-3_8_precondition[w,n5,n6,l-6-5-5,l-6-5-4]
+build-row-3[?len2=n4,?d=w,?t=stone,?loc1=l-6-5-4,?len=n5,?loc2=l-6-5-3] @ buildrow[l-6-5-4,n5,w,stone]
+SHOP_methodbuild-row-3_8_precondition[w,n4,n5,l-6-5-4,l-6-5-3]
+build-row-2[?loc2=l-6-5-2,?d=w,?t=stone,?loc1=l-6-5-3,?len=n4,?len2=n3] @ buildrow[l-6-5-3,n4,w,stone]
+SHOP_methodbuild-row-2_7_precondition[l-6-5-2,n4,w,l-6-5-3,n3]
+place-block-abstract-1[?loc1=l-6-5-3,?t=stone] @ placeblockabstract[l-6-5-3,stone]
+SHOP_methodplace-block-abstract-1_9_precondition[l-6-5-3]
+placeblock[l-6-5-3,stone]
+build-row-2[?loc2=l-6-5-1,?d=w,?t=stone,?loc1=l-6-5-2,?len=n3,?len2=n2] @ buildrow[l-6-5-2,n3,w,stone]
+SHOP_methodbuild-row-2_7_precondition[l-6-5-1,n3,w,l-6-5-2,n2]
+place-block-abstract-1[?loc1=l-6-5-2,?t=stone] @ placeblockabstract[l-6-5-2,stone]
+SHOP_methodplace-block-abstract-1_9_precondition[l-6-5-2]
+placeblock[l-6-5-2,stone]
+build-row-2[?loc2=l-6-5-0,?d=w,?t=stone,?loc1=l-6-5-1,?len=n2,?len2=n1] @ buildrow[l-6-5-1,n2,w,stone]
+SHOP_methodbuild-row-2_7_precondition[l-6-5-0,n2,w,l-6-5-1,n1]
+place-block-abstract-1[?loc1=l-6-5-1,?t=stone] @ placeblockabstract[l-6-5-1,stone]
+SHOP_methodplace-block-abstract-1_9_precondition[l-6-5-1]
+placeblock[l-6-5-1,stone]
+SHOP_methodbuild-row-1_6_precondition[n1]
+place-block-abstract-1[?loc1=l-6-5-0,?t=stone] @ placeblockabstract[l-6-5-0,stone]
+SHOP_methodplace-block-abstract-1_9_precondition[l-6-5-0]
+placeblock[l-6-5-0,stone]
+place-block-abstract-1[?loc1=l-6-5-4,?t=stone] @ placeblockabstract[l-6-5-4,stone]
+SHOP_methodplace-block-abstract-1_9_precondition[l-6-5-4]
+placeblock[l-6-5-4,stone]
+place-block-abstract-2[?loc1=l-6-5-5,?t=stone] @ placeblockabstract[l-6-5-5,stone]
+SHOP_methodplace-block-abstract-2_10_precondition[l-6-5-5,stone]
+SHOP_methodbuild-wall-2_2_precondition[n6,n5,l-1-5-0,l-2-5-0]
+build-row-3[?len2=n5,?d=s,?t=stone,?loc1=l-1-5-0,?len=n6,?loc2=l-1-4-0] @ buildrow[l-1-5-0,n6,s,stone]
+SHOP_methodbuild-row-3_8_precondition[s,n5,n6,l-1-5-0,l-1-4-0]
+build-row-2[?loc2=l-1-3-0,?d=s,?t=stone,?loc1=l-1-4-0,?len=n5,?len2=n4] @ buildrow[l-1-4-0,n5,s,stone]
+SHOP_methodbuild-row-2_7_precondition[l-1-3-0,n5,s,l-1-4-0,n4]
+place-block-abstract-1[?loc1=l-1-4-0,?t=stone] @ placeblockabstract[l-1-4-0,stone]
+SHOP_methodplace-block-abstract-1_9_precondition[l-1-4-0]
+placeblock[l-1-4-0,stone]
+build-row-2[?loc2=l-1-2-0,?d=s,?t=stone,?loc1=l-1-3-0,?len=n4,?len2=n3] @ buildrow[l-1-3-0,n4,s,stone]
+SHOP_methodbuild-row-2_7_precondition[l-1-2-0,n4,s,l-1-3-0,n3]
+place-block-abstract-1[?loc1=l-1-3-0,?t=stone] @ placeblockabstract[l-1-3-0,stone]
+SHOP_methodplace-block-abstract-1_9_precondition[l-1-3-0]
+placeblock[l-1-3-0,stone]
+build-row-3[?len2=n2,?d=s,?t=stone,?loc1=l-1-2-0,?len=n3,?loc2=l-1-1-0] @ buildrow[l-1-2-0,n3,s,stone]
+SHOP_methodbuild-row-3_8_precondition[s,n2,n3,l-1-2-0,l-1-1-0]
+build-row-2[?loc2=l-1-0-0,?d=s,?t=stone,?loc1=l-1-1-0,?len=n2,?len2=n1] @ buildrow[l-1-1-0,n2,s,stone]
+SHOP_methodbuild-row-2_7_precondition[l-1-0-0,n2,s,l-1-1-0,n1]
+place-block-abstract-1[?loc1=l-1-1-0,?t=stone] @ placeblockabstract[l-1-1-0,stone]
+SHOP_methodplace-block-abstract-1_9_precondition[l-1-1-0]
+placeblock[l-1-1-0,stone]
+SHOP_methodbuild-row-1_6_precondition[n1]
+place-block-abstract-2[?loc1=l-1-0-0,?t=stone] @ placeblockabstract[l-1-0-0,stone]
+SHOP_methodplace-block-abstract-2_10_precondition[l-1-0-0,stone]
+place-block-abstract-1[?loc1=l-1-2-0,?t=stone] @ placeblockabstract[l-1-2-0,stone]
+SHOP_methodplace-block-abstract-1_9_precondition[l-1-2-0]
+placeblock[l-1-2-0,stone]
+place-block-abstract-2[?loc1=l-1-5-0,?t=stone] @ placeblockabstract[l-1-5-0,stone]
+SHOP_methodplace-block-abstract-2_10_precondition[l-1-5-0,stone]
+SHOP_methodbuild-wall-2_2_precondition[n5,n4,l-2-5-0,l-3-5-0]
+build-row-2[?loc2=l-2-4-0,?d=s,?t=stone,?loc1=l-2-5-0,?len=n6,?len2=n5] @ buildrow[l-2-5-0,n6,s,stone]
+SHOP_methodbuild-row-2_7_precondition[l-2-4-0,n6,s,l-2-5-0,n5]
+place-block-abstract-2[?loc1=l-2-5-0,?t=stone] @ placeblockabstract[l-2-5-0,stone]
+SHOP_methodplace-block-abstract-2_10_precondition[l-2-5-0,stone]
+build-row-3[?len2=n4,?d=s,?t=stone,?loc1=l-2-4-0,?len=n5,?loc2=l-2-3-0] @ buildrow[l-2-4-0,n5,s,stone]
+SHOP_methodbuild-row-3_8_precondition[s,n4,n5,l-2-4-0,l-2-3-0]
+build-row-2[?loc2=l-2-2-0,?d=s,?t=stone,?loc1=l-2-3-0,?len=n4,?len2=n3] @ buildrow[l-2-3-0,n4,s,stone]
+SHOP_methodbuild-row-2_7_precondition[l-2-2-0,n4,s,l-2-3-0,n3]
+place-block-abstract-1[?loc1=l-2-3-0,?t=stone] @ placeblockabstract[l-2-3-0,stone]
+SHOP_methodplace-block-abstract-1_9_precondition[l-2-3-0]
+placeblock[l-2-3-0,stone]
+build-row-3[?len2=n2,?d=s,?t=stone,?loc1=l-2-2-0,?len=n3,?loc2=l-2-1-0] @ buildrow[l-2-2-0,n3,s,stone]
+SHOP_methodbuild-row-3_8_precondition[s,n2,n3,l-2-2-0,l-2-1-0]
+build-row-2[?loc2=l-2-0-0,?d=s,?t=stone,?loc1=l-2-1-0,?len=n2,?len2=n1] @ buildrow[l-2-1-0,n2,s,stone]
+SHOP_methodbuild-row-2_7_precondition[l-2-0-0,n2,s,l-2-1-0,n1]
+place-block-abstract-1[?loc1=l-2-1-0,?t=stone] @ placeblockabstract[l-2-1-0,stone]
+SHOP_methodplace-block-abstract-1_9_precondition[l-2-1-0]
+placeblock[l-2-1-0,stone]
+SHOP_methodbuild-row-1_6_precondition[n1]
+place-block-abstract-2[?loc1=l-2-0-0,?t=stone] @ placeblockabstract[l-2-0-0,stone]
+SHOP_methodplace-block-abstract-2_10_precondition[l-2-0-0,stone]
+place-block-abstract-1[?loc1=l-2-2-0,?t=stone] @ placeblockabstract[l-2-2-0,stone]
+SHOP_methodplace-block-abstract-1_9_precondition[l-2-2-0]
+placeblock[l-2-2-0,stone]
+place-block-abstract-1[?loc1=l-2-4-0,?t=stone] @ placeblockabstract[l-2-4-0,stone]
+SHOP_methodplace-block-abstract-1_9_precondition[l-2-4-0]
+placeblock[l-2-4-0,stone]
+SHOP_methodbuild-wall-2_2_precondition[n4,n3,l-3-5-0,l-4-5-0]
+build-row-3[?len2=n5,?d=s,?t=stone,?loc1=l-3-5-0,?len=n6,?loc2=l-3-4-0] @ buildrow[l-3-5-0,n6,s,stone]
+SHOP_methodbuild-row-3_8_precondition[s,n5,n6,l-3-5-0,l-3-4-0]
+build-row-2[?loc2=l-3-3-0,?d=s,?t=stone,?loc1=l-3-4-0,?len=n5,?len2=n4] @ buildrow[l-3-4-0,n5,s,stone]
+SHOP_methodbuild-row-2_7_precondition[l-3-3-0,n5,s,l-3-4-0,n4]
+place-block-abstract-1[?loc1=l-3-4-0,?t=stone] @ placeblockabstract[l-3-4-0,stone]
+SHOP_methodplace-block-abstract-1_9_precondition[l-3-4-0]
+placeblock[l-3-4-0,stone]
+build-row-2[?loc2=l-3-2-0,?d=s,?t=stone,?loc1=l-3-3-0,?len=n4,?len2=n3] @ buildrow[l-3-3-0,n4,s,stone]
+SHOP_methodbuild-row-2_7_precondition[l-3-2-0,n4,s,l-3-3-0,n3]
+place-block-abstract-1[?loc1=l-3-3-0,?t=stone] @ placeblockabstract[l-3-3-0,stone]
+SHOP_methodplace-block-abstract-1_9_precondition[l-3-3-0]
+placeblock[l-3-3-0,stone]
+build-row-2[?loc2=l-3-1-0,?d=s,?t=stone,?loc1=l-3-2-0,?len=n3,?len2=n2] @ buildrow[l-3-2-0,n3,s,stone]
+SHOP_methodbuild-row-2_7_precondition[l-3-1-0,n3,s,l-3-2-0,n2]
+place-block-abstract-1[?loc1=l-3-2-0,?t=stone] @ placeblockabstract[l-3-2-0,stone]
+SHOP_methodplace-block-abstract-1_9_precondition[l-3-2-0]
+placeblock[l-3-2-0,stone]
+build-row-2[?loc2=l-3-0-0,?d=s,?t=stone,?loc1=l-3-1-0,?len=n2,?len2=n1] @ buildrow[l-3-1-0,n2,s,stone]
+SHOP_methodbuild-row-2_7_precondition[l-3-0-0,n2,s,l-3-1-0,n1]
+place-block-abstract-1[?loc1=l-3-1-0,?t=stone] @ placeblockabstract[l-3-1-0,stone]
+SHOP_methodplace-block-abstract-1_9_precondition[l-3-1-0]
+placeblock[l-3-1-0,stone]
+SHOP_methodbuild-row-1_6_precondition[n1]
+place-block-abstract-2[?loc1=l-3-0-0,?t=stone] @ placeblockabstract[l-3-0-0,stone]
+SHOP_methodplace-block-abstract-2_10_precondition[l-3-0-0,stone]
+place-block-abstract-2[?loc1=l-3-5-0,?t=stone] @ placeblockabstract[l-3-5-0,stone]
+SHOP_methodplace-block-abstract-2_10_precondition[l-3-5-0,stone]
+SHOP_methodbuild-wall-2_2_precondition[n3,n2,l-4-5-0,l-5-5-0]
+build-row-2[?loc2=l-4-4-0,?d=s,?t=stone,?loc1=l-4-5-0,?len=n6,?len2=n5] @ buildrow[l-4-5-0,n6,s,stone]
+SHOP_methodbuild-row-2_7_precondition[l-4-4-0,n6,s,l-4-5-0,n5]
+place-block-abstract-2[?loc1=l-4-5-0,?t=stone] @ placeblockabstract[l-4-5-0,stone]
+SHOP_methodplace-block-abstract-2_10_precondition[l-4-5-0,stone]
+build-row-2[?loc2=l-4-3-0,?d=s,?t=stone,?loc1=l-4-4-0,?len=n5,?len2=n4] @ buildrow[l-4-4-0,n5,s,stone]
+SHOP_methodbuild-row-2_7_precondition[l-4-3-0,n5,s,l-4-4-0,n4]
+place-block-abstract-1[?loc1=l-4-4-0,?t=stone] @ placeblockabstract[l-4-4-0,stone]
+SHOP_methodplace-block-abstract-1_9_precondition[l-4-4-0]
+placeblock[l-4-4-0,stone]
+build-row-2[?loc2=l-4-2-0,?d=s,?t=stone,?loc1=l-4-3-0,?len=n4,?len2=n3] @ buildrow[l-4-3-0,n4,s,stone]
+SHOP_methodbuild-row-2_7_precondition[l-4-2-0,n4,s,l-4-3-0,n3]
+place-block-abstract-1[?loc1=l-4-3-0,?t=stone] @ placeblockabstract[l-4-3-0,stone]
+SHOP_methodplace-block-abstract-1_9_precondition[l-4-3-0]
+placeblock[l-4-3-0,stone]
+build-row-2[?loc2=l-4-1-0,?d=s,?t=stone,?loc1=l-4-2-0,?len=n3,?len2=n2] @ buildrow[l-4-2-0,n3,s,stone]
+SHOP_methodbuild-row-2_7_precondition[l-4-1-0,n3,s,l-4-2-0,n2]
+place-block-abstract-1[?loc1=l-4-2-0,?t=stone] @ placeblockabstract[l-4-2-0,stone]
+SHOP_methodplace-block-abstract-1_9_precondition[l-4-2-0]
+placeblock[l-4-2-0,stone]
+build-row-2[?loc2=l-4-0-0,?d=s,?t=stone,?loc1=l-4-1-0,?len=n2,?len2=n1] @ buildrow[l-4-1-0,n2,s,stone]
+SHOP_methodbuild-row-2_7_precondition[l-4-0-0,n2,s,l-4-1-0,n1]
+place-block-abstract-1[?loc1=l-4-1-0,?t=stone] @ placeblockabstract[l-4-1-0,stone]
+SHOP_methodplace-block-abstract-1_9_precondition[l-4-1-0]
+placeblock[l-4-1-0,stone]
+SHOP_methodbuild-row-1_6_precondition[n1]
+place-block-abstract-2[?loc1=l-4-0-0,?t=stone] @ placeblockabstract[l-4-0-0,stone]
+SHOP_methodplace-block-abstract-2_10_precondition[l-4-0-0,stone]
+SHOP_methodbuild-wall-2_2_precondition[n2,n1,l-5-5-0,l-6-5-0]
+build-row-3[?len2=n5,?d=s,?t=stone,?loc1=l-5-5-0,?len=n6,?loc2=l-5-4-0] @ buildrow[l-5-5-0,n6,s,stone]
+SHOP_methodbuild-row-3_8_precondition[s,n5,n6,l-5-5-0,l-5-4-0]
+build-row-2[?loc2=l-5-3-0,?d=s,?t=stone,?loc1=l-5-4-0,?len=n5,?len2=n4] @ buildrow[l-5-4-0,n5,s,stone]
+SHOP_methodbuild-row-2_7_precondition[l-5-3-0,n5,s,l-5-4-0,n4]
+place-block-abstract-1[?loc1=l-5-4-0,?t=stone] @ placeblockabstract[l-5-4-0,stone]
+SHOP_methodplace-block-abstract-1_9_precondition[l-5-4-0]
+placeblock[l-5-4-0,stone]
+build-row-2[?loc2=l-5-2-0,?d=s,?t=stone,?loc1=l-5-3-0,?len=n4,?len2=n3] @ buildrow[l-5-3-0,n4,s,stone]
+SHOP_methodbuild-row-2_7_precondition[l-5-2-0,n4,s,l-5-3-0,n3]
+place-block-abstract-1[?loc1=l-5-3-0,?t=stone] @ placeblockabstract[l-5-3-0,stone]
+SHOP_methodplace-block-abstract-1_9_precondition[l-5-3-0]
+placeblock[l-5-3-0,stone]
+build-row-2[?loc2=l-5-1-0,?d=s,?t=stone,?loc1=l-5-2-0,?len=n3,?len2=n2] @ buildrow[l-5-2-0,n3,s,stone]
+SHOP_methodbuild-row-2_7_precondition[l-5-1-0,n3,s,l-5-2-0,n2]
+place-block-abstract-1[?loc1=l-5-2-0,?t=stone] @ placeblockabstract[l-5-2-0,stone]
+SHOP_methodplace-block-abstract-1_9_precondition[l-5-2-0]
+placeblock[l-5-2-0,stone]
+build-row-2[?loc2=l-5-0-0,?d=s,?t=stone,?loc1=l-5-1-0,?len=n2,?len2=n1] @ buildrow[l-5-1-0,n2,s,stone]
+SHOP_methodbuild-row-2_7_precondition[l-5-0-0,n2,s,l-5-1-0,n1]
+place-block-abstract-1[?loc1=l-5-1-0,?t=stone] @ placeblockabstract[l-5-1-0,stone]
+SHOP_methodplace-block-abstract-1_9_precondition[l-5-1-0]
+placeblock[l-5-1-0,stone]
+SHOP_methodbuild-row-1_6_precondition[n1]
+place-block-abstract-2[?loc1=l-5-0-0,?t=stone] @ placeblockabstract[l-5-0-0,stone]
+SHOP_methodplace-block-abstract-2_10_precondition[l-5-0-0,stone]
+place-block-abstract-2[?loc1=l-5-5-0,?t=stone] @ placeblockabstract[l-5-5-0,stone]
+SHOP_methodplace-block-abstract-2_10_precondition[l-5-5-0,stone]
+SHOP_methodbuild-wall-1_1_precondition[n1]
+build-row-3[?len2=n5,?d=s,?t=stone,?loc1=l-6-5-0,?len=n6,?loc2=l-6-4-0] @ buildrow[l-6-5-0,n6,s,stone]
+SHOP_methodbuild-row-3_8_precondition[s,n5,n6,l-6-5-0,l-6-4-0]
+build-row-3[?len2=n4,?d=s,?t=stone,?loc1=l-6-4-0,?len=n5,?loc2=l-6-3-0] @ buildrow[l-6-4-0,n5,s,stone]
+SHOP_methodbuild-row-3_8_precondition[s,n4,n5,l-6-4-0,l-6-3-0]
+build-row-2[?loc2=l-6-2-0,?d=s,?t=stone,?loc1=l-6-3-0,?len=n4,?len2=n3] @ buildrow[l-6-3-0,n4,s,stone]
+SHOP_methodbuild-row-2_7_precondition[l-6-2-0,n4,s,l-6-3-0,n3]
+place-block-abstract-1[?loc1=l-6-3-0,?t=stone] @ placeblockabstract[l-6-3-0,stone]
+SHOP_methodplace-block-abstract-1_9_precondition[l-6-3-0]
+placeblock[l-6-3-0,stone]
+build-row-2[?loc2=l-6-1-0,?d=s,?t=stone,?loc1=l-6-2-0,?len=n3,?len2=n2] @ buildrow[l-6-2-0,n3,s,stone]
+SHOP_methodbuild-row-2_7_precondition[l-6-1-0,n3,s,l-6-2-0,n2]
+place-block-abstract-1[?loc1=l-6-2-0,?t=stone] @ placeblockabstract[l-6-2-0,stone]
+SHOP_methodplace-block-abstract-1_9_precondition[l-6-2-0]
+placeblock[l-6-2-0,stone]
+build-row-2[?loc2=l-6-0-0,?d=s,?t=stone,?loc1=l-6-1-0,?len=n2,?len2=n1] @ buildrow[l-6-1-0,n2,s,stone]
+SHOP_methodbuild-row-2_7_precondition[l-6-0-0,n2,s,l-6-1-0,n1]
+place-block-abstract-1[?loc1=l-6-1-0,?t=stone] @ placeblockabstract[l-6-1-0,stone]
+SHOP_methodplace-block-abstract-1_9_precondition[l-6-1-0]
+placeblock[l-6-1-0,stone]
+SHOP_methodbuild-row-1_6_precondition[n1]
+place-block-abstract-2[?loc1=l-6-0-0,?t=stone] @ placeblockabstract[l-6-0-0,stone]
+SHOP_methodplace-block-abstract-2_10_precondition[l-6-0-0,stone]
+place-block-abstract-1[?loc1=l-6-4-0,?t=stone] @ placeblockabstract[l-6-4-0,stone]
+SHOP_methodplace-block-abstract-1_9_precondition[l-6-4-0]
+placeblock[l-6-4-0,stone]
+place-block-abstract-2[?loc1=l-6-5-0,?t=stone] @ placeblockabstract[l-6-5-0,stone]
+SHOP_methodplace-block-abstract-2_10_precondition[l-6-5-0,stone]
+SHOP_methodbuild-door-1_5_precondition[l-1-2-0,l-2-2-0]
+remove-block-abstract-2[?t=stone,?loc1=l-1-2-0] @ removeblockabstract[l-1-2-0]
+SHOP_methodremove-block-abstract-2_13_precondition[l-1-2-0,stone]
+removeblock[l-1-2-0,stone]
+remove-block-abstract-2[?t=stone,?loc1=l-2-2-0] @ removeblockabstract[l-2-2-0]
+SHOP_methodremove-block-abstract-2_13_precondition[l-2-2-0,stone]
+removeblock[l-2-2-0,stone]
+SHOP_methodbuild-roof-2_4_precondition[n5,n,l-7-1-0,l-7-0-0,n6]
+build-row-3[?len2=n5,?d=e,?t=stone,?loc1=l-7-0-0,?len=n6,?loc2=l-7-0-1] @ buildrow[l-7-0-0,n6,e,stone]
+SHOP_methodbuild-row-3_8_precondition[e,n5,n6,l-7-0-0,l-7-0-1]
+build-row-2[?loc2=l-7-0-2,?d=e,?t=stone,?loc1=l-7-0-1,?len=n5,?len2=n4] @ buildrow[l-7-0-1,n5,e,stone]
+SHOP_methodbuild-row-2_7_precondition[l-7-0-2,n5,e,l-7-0-1,n4]
+place-block-abstract-1[?loc1=l-7-0-1,?t=stone] @ placeblockabstract[l-7-0-1,stone]
+SHOP_methodplace-block-abstract-1_9_precondition[l-7-0-1]
+placeblock[l-7-0-1,stone]
+build-row-2[?loc2=l-7-0-3,?d=e,?t=stone,?loc1=l-7-0-2,?len=n4,?len2=n3] @ buildrow[l-7-0-2,n4,e,stone]
+SHOP_methodbuild-row-2_7_precondition[l-7-0-3,n4,e,l-7-0-2,n3]
+place-block-abstract-1[?loc1=l-7-0-2,?t=stone] @ placeblockabstract[l-7-0-2,stone]
+SHOP_methodplace-block-abstract-1_9_precondition[l-7-0-2]
+placeblock[l-7-0-2,stone]
+build-row-2[?loc2=l-7-0-4,?d=e,?t=stone,?loc1=l-7-0-3,?len=n3,?len2=n2] @ buildrow[l-7-0-3,n3,e,stone]
+SHOP_methodbuild-row-2_7_precondition[l-7-0-4,n3,e,l-7-0-3,n2]
+place-block-abstract-1[?loc1=l-7-0-3,?t=stone] @ placeblockabstract[l-7-0-3,stone]
+SHOP_methodplace-block-abstract-1_9_precondition[l-7-0-3]
+placeblock[l-7-0-3,stone]
+build-row-2[?loc2=l-7-0-5,?d=e,?t=stone,?loc1=l-7-0-4,?len=n2,?len2=n1] @ buildrow[l-7-0-4,n2,e,stone]
+SHOP_methodbuild-row-2_7_precondition[l-7-0-5,n2,e,l-7-0-4,n1]
+place-block-abstract-1[?loc1=l-7-0-4,?t=stone] @ placeblockabstract[l-7-0-4,stone]
+SHOP_methodplace-block-abstract-1_9_precondition[l-7-0-4]
+placeblock[l-7-0-4,stone]
+SHOP_methodbuild-row-1_6_precondition[n1]
+place-block-abstract-1[?loc1=l-7-0-5,?t=stone] @ placeblockabstract[l-7-0-5,stone]
+SHOP_methodplace-block-abstract-1_9_precondition[l-7-0-5]
+placeblock[l-7-0-5,stone]
+place-block-abstract-1[?loc1=l-7-0-0,?t=stone] @ placeblockabstract[l-7-0-0,stone]
+SHOP_methodplace-block-abstract-1_9_precondition[l-7-0-0]
+placeblock[l-7-0-0,stone]
+SHOP_methodbuild-roof-2_4_precondition[n4,n,l-7-2-0,l-7-1-0,n5]
+build-row-2[?loc2=l-7-1-1,?d=e,?t=stone,?loc1=l-7-1-0,?len=n6,?len2=n5] @ buildrow[l-7-1-0,n6,e,stone]
+SHOP_methodbuild-row-2_7_precondition[l-7-1-1,n6,e,l-7-1-0,n5]
+place-block-abstract-1[?loc1=l-7-1-0,?t=stone] @ placeblockabstract[l-7-1-0,stone]
+SHOP_methodplace-block-abstract-1_9_precondition[l-7-1-0]
+placeblock[l-7-1-0,stone]
+build-row-2[?loc2=l-7-1-2,?d=e,?t=stone,?loc1=l-7-1-1,?len=n5,?len2=n4] @ buildrow[l-7-1-1,n5,e,stone]
+SHOP_methodbuild-row-2_7_precondition[l-7-1-2,n5,e,l-7-1-1,n4]
+place-block-abstract-1[?loc1=l-7-1-1,?t=stone] @ placeblockabstract[l-7-1-1,stone]
+SHOP_methodplace-block-abstract-1_9_precondition[l-7-1-1]
+placeblock[l-7-1-1,stone]
+build-row-2[?loc2=l-7-1-3,?d=e,?t=stone,?loc1=l-7-1-2,?len=n4,?len2=n3] @ buildrow[l-7-1-2,n4,e,stone]
+SHOP_methodbuild-row-2_7_precondition[l-7-1-3,n4,e,l-7-1-2,n3]
+place-block-abstract-1[?loc1=l-7-1-2,?t=stone] @ placeblockabstract[l-7-1-2,stone]
+SHOP_methodplace-block-abstract-1_9_precondition[l-7-1-2]
+placeblock[l-7-1-2,stone]
+build-row-2[?loc2=l-7-1-4,?d=e,?t=stone,?loc1=l-7-1-3,?len=n3,?len2=n2] @ buildrow[l-7-1-3,n3,e,stone]
+SHOP_methodbuild-row-2_7_precondition[l-7-1-4,n3,e,l-7-1-3,n2]
+place-block-abstract-1[?loc1=l-7-1-3,?t=stone] @ placeblockabstract[l-7-1-3,stone]
+SHOP_methodplace-block-abstract-1_9_precondition[l-7-1-3]
+placeblock[l-7-1-3,stone]
+build-row-2[?loc2=l-7-1-5,?d=e,?t=stone,?loc1=l-7-1-4,?len=n2,?len2=n1] @ buildrow[l-7-1-4,n2,e,stone]
+SHOP_methodbuild-row-2_7_precondition[l-7-1-5,n2,e,l-7-1-4,n1]
+place-block-abstract-1[?loc1=l-7-1-4,?t=stone] @ placeblockabstract[l-7-1-4,stone]
+SHOP_methodplace-block-abstract-1_9_precondition[l-7-1-4]
+placeblock[l-7-1-4,stone]
+SHOP_methodbuild-row-1_6_precondition[n1]
+place-block-abstract-1[?loc1=l-7-1-5,?t=stone] @ placeblockabstract[l-7-1-5,stone]
+SHOP_methodplace-block-abstract-1_9_precondition[l-7-1-5]
+placeblock[l-7-1-5,stone]
+SHOP_methodbuild-roof-2_4_precondition[n3,n,l-7-3-0,l-7-2-0,n4]
+build-row-2[?loc2=l-7-2-1,?d=e,?t=stone,?loc1=l-7-2-0,?len=n6,?len2=n5] @ buildrow[l-7-2-0,n6,e,stone]
+SHOP_methodbuild-row-2_7_precondition[l-7-2-1,n6,e,l-7-2-0,n5]
+place-block-abstract-1[?loc1=l-7-2-0,?t=stone] @ placeblockabstract[l-7-2-0,stone]
+SHOP_methodplace-block-abstract-1_9_precondition[l-7-2-0]
+placeblock[l-7-2-0,stone]
+build-row-3[?len2=n4,?d=e,?t=stone,?loc1=l-7-2-1,?len=n5,?loc2=l-7-2-2] @ buildrow[l-7-2-1,n5,e,stone]
+SHOP_methodbuild-row-3_8_precondition[e,n4,n5,l-7-2-1,l-7-2-2]
+build-row-2[?loc2=l-7-2-3,?d=e,?t=stone,?loc1=l-7-2-2,?len=n4,?len2=n3] @ buildrow[l-7-2-2,n4,e,stone]
+SHOP_methodbuild-row-2_7_precondition[l-7-2-3,n4,e,l-7-2-2,n3]
+place-block-abstract-1[?loc1=l-7-2-2,?t=stone] @ placeblockabstract[l-7-2-2,stone]
+SHOP_methodplace-block-abstract-1_9_precondition[l-7-2-2]
+placeblock[l-7-2-2,stone]
+build-row-2[?loc2=l-7-2-4,?d=e,?t=stone,?loc1=l-7-2-3,?len=n3,?len2=n2] @ buildrow[l-7-2-3,n3,e,stone]
+SHOP_methodbuild-row-2_7_precondition[l-7-2-4,n3,e,l-7-2-3,n2]
+place-block-abstract-1[?loc1=l-7-2-3,?t=stone] @ placeblockabstract[l-7-2-3,stone]
+SHOP_methodplace-block-abstract-1_9_precondition[l-7-2-3]
+placeblock[l-7-2-3,stone]
+build-row-2[?loc2=l-7-2-5,?d=e,?t=stone,?loc1=l-7-2-4,?len=n2,?len2=n1] @ buildrow[l-7-2-4,n2,e,stone]
+SHOP_methodbuild-row-2_7_precondition[l-7-2-5,n2,e,l-7-2-4,n1]
+place-block-abstract-1[?loc1=l-7-2-4,?t=stone] @ placeblockabstract[l-7-2-4,stone]
+SHOP_methodplace-block-abstract-1_9_precondition[l-7-2-4]
+placeblock[l-7-2-4,stone]
+SHOP_methodbuild-row-1_6_precondition[n1]
+place-block-abstract-1[?loc1=l-7-2-5,?t=stone] @ placeblockabstract[l-7-2-5,stone]
+SHOP_methodplace-block-abstract-1_9_precondition[l-7-2-5]
+placeblock[l-7-2-5,stone]
+place-block-abstract-1[?loc1=l-7-2-1,?t=stone] @ placeblockabstract[l-7-2-1,stone]
+SHOP_methodplace-block-abstract-1_9_precondition[l-7-2-1]
+placeblock[l-7-2-1,stone]
+SHOP_methodbuild-roof-2_4_precondition[n2,n,l-7-4-0,l-7-3-0,n3]
+build-row-2[?loc2=l-7-3-1,?d=e,?t=stone,?loc1=l-7-3-0,?len=n6,?len2=n5] @ buildrow[l-7-3-0,n6,e,stone]
+SHOP_methodbuild-row-2_7_precondition[l-7-3-1,n6,e,l-7-3-0,n5]
+place-block-abstract-1[?loc1=l-7-3-0,?t=stone] @ placeblockabstract[l-7-3-0,stone]
+SHOP_methodplace-block-abstract-1_9_precondition[l-7-3-0]
+placeblock[l-7-3-0,stone]
+build-row-2[?loc2=l-7-3-2,?d=e,?t=stone,?loc1=l-7-3-1,?len=n5,?len2=n4] @ buildrow[l-7-3-1,n5,e,stone]
+SHOP_methodbuild-row-2_7_precondition[l-7-3-2,n5,e,l-7-3-1,n4]
+place-block-abstract-1[?loc1=l-7-3-1,?t=stone] @ placeblockabstract[l-7-3-1,stone]
+SHOP_methodplace-block-abstract-1_9_precondition[l-7-3-1]
+placeblock[l-7-3-1,stone]
+build-row-2[?loc2=l-7-3-3,?d=e,?t=stone,?loc1=l-7-3-2,?len=n4,?len2=n3] @ buildrow[l-7-3-2,n4,e,stone]
+SHOP_methodbuild-row-2_7_precondition[l-7-3-3,n4,e,l-7-3-2,n3]
+place-block-abstract-1[?loc1=l-7-3-2,?t=stone] @ placeblockabstract[l-7-3-2,stone]
+SHOP_methodplace-block-abstract-1_9_precondition[l-7-3-2]
+placeblock[l-7-3-2,stone]
+build-row-2[?loc2=l-7-3-4,?d=e,?t=stone,?loc1=l-7-3-3,?len=n3,?len2=n2] @ buildrow[l-7-3-3,n3,e,stone]
+SHOP_methodbuild-row-2_7_precondition[l-7-3-4,n3,e,l-7-3-3,n2]
+place-block-abstract-1[?loc1=l-7-3-3,?t=stone] @ placeblockabstract[l-7-3-3,stone]
+SHOP_methodplace-block-abstract-1_9_precondition[l-7-3-3]
+placeblock[l-7-3-3,stone]
+build-row-2[?loc2=l-7-3-5,?d=e,?t=stone,?loc1=l-7-3-4,?len=n2,?len2=n1] @ buildrow[l-7-3-4,n2,e,stone]
+SHOP_methodbuild-row-2_7_precondition[l-7-3-5,n2,e,l-7-3-4,n1]
+place-block-abstract-1[?loc1=l-7-3-4,?t=stone] @ placeblockabstract[l-7-3-4,stone]
+SHOP_methodplace-block-abstract-1_9_precondition[l-7-3-4]
+placeblock[l-7-3-4,stone]
+SHOP_methodbuild-row-1_6_precondition[n1]
+place-block-abstract-1[?loc1=l-7-3-5,?t=stone] @ placeblockabstract[l-7-3-5,stone]
+SHOP_methodplace-block-abstract-1_9_precondition[l-7-3-5]
+placeblock[l-7-3-5,stone]
+SHOP_methodbuild-roof-2_4_precondition[n1,n,l-7-5-0,l-7-4-0,n2]
+build-row-3[?len2=n5,?d=e,?t=stone,?loc1=l-7-4-0,?len=n6,?loc2=l-7-4-1] @ buildrow[l-7-4-0,n6,e,stone]
+SHOP_methodbuild-row-3_8_precondition[e,n5,n6,l-7-4-0,l-7-4-1]
+build-row-2[?loc2=l-7-4-2,?d=e,?t=stone,?loc1=l-7-4-1,?len=n5,?len2=n4] @ buildrow[l-7-4-1,n5,e,stone]
+SHOP_methodbuild-row-2_7_precondition[l-7-4-2,n5,e,l-7-4-1,n4]
+place-block-abstract-1[?loc1=l-7-4-1,?t=stone] @ placeblockabstract[l-7-4-1,stone]
+SHOP_methodplace-block-abstract-1_9_precondition[l-7-4-1]
+placeblock[l-7-4-1,stone]
+build-row-3[?len2=n3,?d=e,?t=stone,?loc1=l-7-4-2,?len=n4,?loc2=l-7-4-3] @ buildrow[l-7-4-2,n4,e,stone]
+SHOP_methodbuild-row-3_8_precondition[e,n3,n4,l-7-4-2,l-7-4-3]
+build-row-2[?loc2=l-7-4-4,?d=e,?t=stone,?loc1=l-7-4-3,?len=n3,?len2=n2] @ buildrow[l-7-4-3,n3,e,stone]
+SHOP_methodbuild-row-2_7_precondition[l-7-4-4,n3,e,l-7-4-3,n2]
+place-block-abstract-1[?loc1=l-7-4-3,?t=stone] @ placeblockabstract[l-7-4-3,stone]
+SHOP_methodplace-block-abstract-1_9_precondition[l-7-4-3]
+placeblock[l-7-4-3,stone]
+build-row-2[?loc2=l-7-4-5,?d=e,?t=stone,?loc1=l-7-4-4,?len=n2,?len2=n1] @ buildrow[l-7-4-4,n2,e,stone]
+SHOP_methodbuild-row-2_7_precondition[l-7-4-5,n2,e,l-7-4-4,n1]
+place-block-abstract-1[?loc1=l-7-4-4,?t=stone] @ placeblockabstract[l-7-4-4,stone]
+SHOP_methodplace-block-abstract-1_9_precondition[l-7-4-4]
+placeblock[l-7-4-4,stone]
+SHOP_methodbuild-row-1_6_precondition[n1]
+place-block-abstract-1[?loc1=l-7-4-5,?t=stone] @ placeblockabstract[l-7-4-5,stone]
+SHOP_methodplace-block-abstract-1_9_precondition[l-7-4-5]
+placeblock[l-7-4-5,stone]
+place-block-abstract-1[?loc1=l-7-4-2,?t=stone] @ placeblockabstract[l-7-4-2,stone]
+SHOP_methodplace-block-abstract-1_9_precondition[l-7-4-2]
+placeblock[l-7-4-2,stone]
+place-block-abstract-1[?loc1=l-7-4-0,?t=stone] @ placeblockabstract[l-7-4-0,stone]
+SHOP_methodplace-block-abstract-1_9_precondition[l-7-4-0]
+placeblock[l-7-4-0,stone]
+SHOP_methodbuild-roof-1_3_precondition[n1]
+build-row-2[?loc2=l-7-5-1,?d=e,?t=stone,?loc1=l-7-5-0,?len=n6,?len2=n5] @ buildrow[l-7-5-0,n6,e,stone]
+SHOP_methodbuild-row-2_7_precondition[l-7-5-1,n6,e,l-7-5-0,n5]
+place-block-abstract-1[?loc1=l-7-5-0,?t=stone] @ placeblockabstract[l-7-5-0,stone]
+SHOP_methodplace-block-abstract-1_9_precondition[l-7-5-0]
+placeblock[l-7-5-0,stone]
+build-row-2[?loc2=l-7-5-2,?d=e,?t=stone,?loc1=l-7-5-1,?len=n5,?len2=n4] @ buildrow[l-7-5-1,n5,e,stone]
+SHOP_methodbuild-row-2_7_precondition[l-7-5-2,n5,e,l-7-5-1,n4]
+place-block-abstract-1[?loc1=l-7-5-1,?t=stone] @ placeblockabstract[l-7-5-1,stone]
+SHOP_methodplace-block-abstract-1_9_precondition[l-7-5-1]
+placeblock[l-7-5-1,stone]
+build-row-2[?loc2=l-7-5-3,?d=e,?t=stone,?loc1=l-7-5-2,?len=n4,?len2=n3] @ buildrow[l-7-5-2,n4,e,stone]
+SHOP_methodbuild-row-2_7_precondition[l-7-5-3,n4,e,l-7-5-2,n3]
+place-block-abstract-1[?loc1=l-7-5-2,?t=stone] @ placeblockabstract[l-7-5-2,stone]
+SHOP_methodplace-block-abstract-1_9_precondition[l-7-5-2]
+placeblock[l-7-5-2,stone]
+build-row-2[?loc2=l-7-5-4,?d=e,?t=stone,?loc1=l-7-5-3,?len=n3,?len2=n2] @ buildrow[l-7-5-3,n3,e,stone]
+SHOP_methodbuild-row-2_7_precondition[l-7-5-4,n3,e,l-7-5-3,n2]
+place-block-abstract-1[?loc1=l-7-5-3,?t=stone] @ placeblockabstract[l-7-5-3,stone]
+SHOP_methodplace-block-abstract-1_9_precondition[l-7-5-3]
+placeblock[l-7-5-3,stone]
+build-row-2[?loc2=l-7-5-5,?d=e,?t=stone,?loc1=l-7-5-4,?len=n2,?len2=n1] @ buildrow[l-7-5-4,n2,e,stone]
+SHOP_methodbuild-row-2_7_precondition[l-7-5-5,n2,e,l-7-5-4,n1]
+place-block-abstract-1[?loc1=l-7-5-4,?t=stone] @ placeblockabstract[l-7-5-4,stone]
+SHOP_methodplace-block-abstract-1_9_precondition[l-7-5-4]
+placeblock[l-7-5-4,stone]
+SHOP_methodbuild-row-1_6_precondition[n1]
+place-block-abstract-1[?loc1=l-7-5-5,?t=stone] @ placeblockabstract[l-7-5-5,stone]
+SHOP_methodplace-block-abstract-1_9_precondition[l-7-5-5]
+placeblock[l-7-5-5,stone]
+It contains 884 modifications, including 551 actions.
+Panda says: SOLUTION
+============ global ============
+randomseed     = 42
+peak memory    = 920728464
+planner result = SOLUTION
+============ properties ============
+acyclic                  = true
+mostly acyclic           = true
+regular                  = false
+tail recursive           = true
+totally ordered          = true
+last task in all methods = true
+============ problem ============
+number of constants                  = 0
+number of predicates                 = 468
+number of actions                    = 1422
+number of abstract actions           = 309
+number of primitive actions          = 1113
+number of methods                    = 773
+number of primitive shop actions     = 801
+number of primitive non-shop actions = 312
+size of largest method               = 63
+average method size                  = 2
+============ progression ============
+status                 = solved
+aStar                  = 1
+heuristic              = hhRelataxedComposition-with-hFF-EQ
+numSearchNodes         = 12011
+numPrimTasks           = 551
+numShopTasks           = 0
+numDecompositions      = 333
+findShortestPlan       = 0
+foundShortestPlanAfter = 1203
+foundFirstPlanAfter    = 1203
+foundPlans             = 1
+
+----------------- TIMINGS -----------------
+============ total ============
+total = 6711
+============ parsing ============
+total                         = 1138
+file parser                   = 391
+sort expansion                = 358
+closed world assumption       = 180
+inherit preconditions         = 0
+shop methods                  = 11
+eliminate identical variables = 142
+strip domain of hybridity     = 2
+flatten formula               = 52
+============ preprocessing ============
+total                                      = 4128
+compile negative preconditions             = 80
+compile unit methods                       = 0
+split parameter                            = 60
+expand choiceless abstract tasks           = 426
+compile methods with identical tasks       = 0
+removing unnecessary predicates            = 127
+lifted reachabiltiy analysis               = 129
+grounded planning graph analysis           = 736
+grounded task decomposition graph analysis = 2445
+grounding                                  = 111
+create artificial top task                 = 4
+============ progression ============
+searchTime = 1203
+
+#1 "30 problem:05:number of primitive actions"="1113";"30 problem:01:number of constants"="0";"30 problem:04:number of abstract actions"="309";"02 properties:04:tail recursive"="true";"30 progression:04:numSearchNodes"="12011";"30 progression:06:numPrimTasks"="551";"00 global:80:peak memory"="920728464";"30 progression:93:foundFirstPlanAfter"="1203";"02 properties:02:mostly acyclic"="true";"30 problem:06:number of methods"="773";"30 problem:07:number of primitive shop actions"="801";"02 properties:05:totally ordered"="true";"02 properties:06:last task in all methods"="true";"30 problem:03:number of actions"="1422";"30 problem:08:number of primitive non-shop actions"="312";"30 problem:02:number of predicates"="468";"30 progression:01:status"="solved";"30 progression:03:heuristic"="hhRelataxedComposition-with-hFF-EQ";"30 problem:10:average method size"="2";"02 properties:03:regular"="false";"30 problem:09:size of largest method"="63";"30 progression:08:numDecompositions"="333";"00 global:90:planner result"="SOLUTION";"02 properties:01:acyclic"="true";"30 progression:02:aStar"="1";"30 progression:92:foundShortestPlanAfter"="1203";"00 global:02:randomseed"="42";"30 progression:07:numShopTasks"="0";"30 progression:91:findShortestPlan"="0";"30 progression:94:foundPlans"="1";"01 parsing:01:file parser"="391";"01 parsing:08:flatten formula"="52";"02 preprocessing:07:compile methods with identical tasks"="0";"01 parsing:07:strip domain of hybridity"="2";"02 preprocessing:08:removing unnecessary predicates"="127";"01 parsing:03:closed world assumption"="180";"02 preprocessing:11:lifted reachabiltiy analysis"="129";"01 parsing:02:sort expansion"="358";"01 parsing:00:total"="1138";"30 progression:01:searchTime"="1203";"01 parsing:04:inherit preconditions"="0";"02 preprocessing:01:compile negative preconditions"="80";"00 total:00:total"="6711";"02 preprocessing:12:grounded planning graph analysis"="736";"02 preprocessing:02:compile unit methods"="0";"02 preprocessing:23:grounded task decomposition graph analysis"="2445";"02 preprocessing:04:split parameter"="60";"01 parsing:05:shop methods"="11";"01 parsing:06:eliminate identical variables"="142";"02 preprocessing:05:expand choiceless abstract tasks"="426";"02 preprocessing:00:total"="4128";"02 preprocessing:99:create artificial top task"="4";"02 preprocessing:84:grounding"="111"
+SOLUTION SEQUENCE
+0: SHOP_methodbuild-wall-2_2_precondition(n6,n5,l-1-0-0,l-2-0-0)
+1: SHOP_methodbuild-row-3_8_precondition(e,n5,n6,l-1-0-0,l-1-0-1)
+2: SHOP_methodbuild-row-2_7_precondition(l-1-0-2,n5,e,l-1-0-1,n4)
+3: SHOP_methodplace-block-abstract-1_9_precondition(l-1-0-1)
+4: placeblock(l-1-0-1,stone)
+5: SHOP_methodbuild-row-2_7_precondition(l-1-0-3,n4,e,l-1-0-2,n3)
+6: SHOP_methodplace-block-abstract-1_9_precondition(l-1-0-2)
+7: placeblock(l-1-0-2,stone)
+8: SHOP_methodbuild-row-2_7_precondition(l-1-0-4,n3,e,l-1-0-3,n2)
+9: SHOP_methodplace-block-abstract-1_9_precondition(l-1-0-3)
+10: placeblock(l-1-0-3,stone)
+11: SHOP_methodbuild-row-2_7_precondition(l-1-0-5,n2,e,l-1-0-4,n1)
+12: SHOP_methodplace-block-abstract-1_9_precondition(l-1-0-4)
+13: placeblock(l-1-0-4,stone)
+14: SHOP_methodbuild-row-1_6_precondition(n1)
+15: SHOP_methodplace-block-abstract-1_9_precondition(l-1-0-5)
+16: placeblock(l-1-0-5,stone)
+17: SHOP_methodplace-block-abstract-1_9_precondition(l-1-0-0)
+18: placeblock(l-1-0-0,stone)
+19: SHOP_methodbuild-wall-2_2_precondition(n5,n4,l-2-0-0,l-3-0-0)
+20: SHOP_methodbuild-row-3_8_precondition(e,n5,n6,l-2-0-0,l-2-0-1)
+21: SHOP_methodbuild-row-2_7_precondition(l-2-0-2,n5,e,l-2-0-1,n4)
+22: SHOP_methodplace-block-abstract-1_9_precondition(l-2-0-1)
+23: placeblock(l-2-0-1,stone)
+24: SHOP_methodbuild-row-2_7_precondition(l-2-0-3,n4,e,l-2-0-2,n3)
+25: SHOP_methodplace-block-abstract-1_9_precondition(l-2-0-2)
+26: placeblock(l-2-0-2,stone)
+27: SHOP_methodbuild-row-3_8_precondition(e,n2,n3,l-2-0-3,l-2-0-4)
+28: SHOP_methodbuild-row-3_8_precondition(e,n1,n2,l-2-0-4,l-2-0-5)
+29: SHOP_methodbuild-row-1_6_precondition(n1)
+30: SHOP_methodplace-block-abstract-1_9_precondition(l-2-0-5)
+31: placeblock(l-2-0-5,stone)
+32: SHOP_methodplace-block-abstract-1_9_precondition(l-2-0-4)
+33: placeblock(l-2-0-4,stone)
+34: SHOP_methodplace-block-abstract-1_9_precondition(l-2-0-3)
+35: placeblock(l-2-0-3,stone)
+36: SHOP_methodplace-block-abstract-1_9_precondition(l-2-0-0)
+37: placeblock(l-2-0-0,stone)
+38: SHOP_methodbuild-wall-2_2_precondition(n4,n3,l-3-0-0,l-4-0-0)
+39: SHOP_methodbuild-row-3_8_precondition(e,n5,n6,l-3-0-0,l-3-0-1)
+40: SHOP_methodbuild-row-2_7_precondition(l-3-0-2,n5,e,l-3-0-1,n4)
+41: SHOP_methodplace-block-abstract-1_9_precondition(l-3-0-1)
+42: placeblock(l-3-0-1,stone)
+43: SHOP_methodbuild-row-2_7_precondition(l-3-0-3,n4,e,l-3-0-2,n3)
+44: SHOP_methodplace-block-abstract-1_9_precondition(l-3-0-2)
+45: placeblock(l-3-0-2,stone)
+46: SHOP_methodbuild-row-2_7_precondition(l-3-0-4,n3,e,l-3-0-3,n2)
+47: SHOP_methodplace-block-abstract-1_9_precondition(l-3-0-3)
+48: placeblock(l-3-0-3,stone)
+49: SHOP_methodbuild-row-2_7_precondition(l-3-0-5,n2,e,l-3-0-4,n1)
+50: SHOP_methodplace-block-abstract-1_9_precondition(l-3-0-4)
+51: placeblock(l-3-0-4,stone)
+52: SHOP_methodbuild-row-1_6_precondition(n1)
+53: SHOP_methodplace-block-abstract-1_9_precondition(l-3-0-5)
+54: placeblock(l-3-0-5,stone)
+55: SHOP_methodplace-block-abstract-1_9_precondition(l-3-0-0)
+56: placeblock(l-3-0-0,stone)
+57: SHOP_methodbuild-wall-2_2_precondition(n3,n2,l-4-0-0,l-5-0-0)
+58: SHOP_methodbuild-row-3_8_precondition(e,n5,n6,l-4-0-0,l-4-0-1)
+59: SHOP_methodbuild-row-3_8_precondition(e,n4,n5,l-4-0-1,l-4-0-2)
+60: SHOP_methodbuild-row-2_7_precondition(l-4-0-3,n4,e,l-4-0-2,n3)
+61: SHOP_methodplace-block-abstract-1_9_precondition(l-4-0-2)
+62: placeblock(l-4-0-2,stone)
+63: SHOP_methodbuild-row-2_7_precondition(l-4-0-4,n3,e,l-4-0-3,n2)
+64: SHOP_methodplace-block-abstract-1_9_precondition(l-4-0-3)
+65: placeblock(l-4-0-3,stone)
+66: SHOP_methodbuild-row-2_7_precondition(l-4-0-5,n2,e,l-4-0-4,n1)
+67: SHOP_methodplace-block-abstract-1_9_precondition(l-4-0-4)
+68: placeblock(l-4-0-4,stone)
+69: SHOP_methodbuild-row-1_6_precondition(n1)
+70: SHOP_methodplace-block-abstract-1_9_precondition(l-4-0-5)
+71: placeblock(l-4-0-5,stone)
+72: SHOP_methodplace-block-abstract-1_9_precondition(l-4-0-1)
+73: placeblock(l-4-0-1,stone)
+74: SHOP_methodplace-block-abstract-1_9_precondition(l-4-0-0)
+75: placeblock(l-4-0-0,stone)
+76: SHOP_methodbuild-wall-2_2_precondition(n2,n1,l-5-0-0,l-6-0-0)
+77: SHOP_methodbuild-row-3_8_precondition(e,n5,n6,l-5-0-0,l-5-0-1)
+78: SHOP_methodbuild-row-2_7_precondition(l-5-0-2,n5,e,l-5-0-1,n4)
+79: SHOP_methodplace-block-abstract-1_9_precondition(l-5-0-1)
+80: placeblock(l-5-0-1,stone)
+81: SHOP_methodbuild-row-2_7_precondition(l-5-0-3,n4,e,l-5-0-2,n3)
+82: SHOP_methodplace-block-abstract-1_9_precondition(l-5-0-2)
+83: placeblock(l-5-0-2,stone)
+84: SHOP_methodbuild-row-2_7_precondition(l-5-0-4,n3,e,l-5-0-3,n2)
+85: SHOP_methodplace-block-abstract-1_9_precondition(l-5-0-3)
+86: placeblock(l-5-0-3,stone)
+87: SHOP_methodbuild-row-3_8_precondition(e,n1,n2,l-5-0-4,l-5-0-5)
+88: SHOP_methodbuild-row-1_6_precondition(n1)
+89: SHOP_methodplace-block-abstract-1_9_precondition(l-5-0-5)
+90: placeblock(l-5-0-5,stone)
+91: SHOP_methodplace-block-abstract-1_9_precondition(l-5-0-4)
+92: placeblock(l-5-0-4,stone)
+93: SHOP_methodplace-block-abstract-1_9_precondition(l-5-0-0)
+94: placeblock(l-5-0-0,stone)
+95: SHOP_methodbuild-wall-1_1_precondition(n1)
+96: SHOP_methodbuild-row-3_8_precondition(e,n5,n6,l-6-0-0,l-6-0-1)
+97: SHOP_methodbuild-row-2_7_precondition(l-6-0-2,n5,e,l-6-0-1,n4)
+98: SHOP_methodplace-block-abstract-1_9_precondition(l-6-0-1)
+99: placeblock(l-6-0-1,stone)
+100: SHOP_methodbuild-row-3_8_precondition(e,n3,n4,l-6-0-2,l-6-0-3)
+101: SHOP_methodbuild-row-2_7_precondition(l-6-0-4,n3,e,l-6-0-3,n2)
+102: SHOP_methodplace-block-abstract-1_9_precondition(l-6-0-3)
+103: placeblock(l-6-0-3,stone)
+104: SHOP_methodbuild-row-3_8_precondition(e,n1,n2,l-6-0-4,l-6-0-5)
+105: SHOP_methodbuild-row-1_6_precondition(n1)
+106: SHOP_methodplace-block-abstract-1_9_precondition(l-6-0-5)
+107: placeblock(l-6-0-5,stone)
+108: SHOP_methodplace-block-abstract-1_9_precondition(l-6-0-4)
+109: placeblock(l-6-0-4,stone)
+110: SHOP_methodplace-block-abstract-1_9_precondition(l-6-0-2)
+111: placeblock(l-6-0-2,stone)
+112: SHOP_methodplace-block-abstract-1_9_precondition(l-6-0-0)
+113: placeblock(l-6-0-0,stone)
+114: SHOP_methodbuild-wall-2_2_precondition(n6,n5,l-1-0-5,l-2-0-5)
+115: SHOP_methodbuild-row-3_8_precondition(n,n5,n6,l-1-0-5,l-1-1-5)
+116: SHOP_methodbuild-row-2_7_precondition(l-1-2-5,n5,n,l-1-1-5,n4)
+117: SHOP_methodplace-block-abstract-1_9_precondition(l-1-1-5)
+118: placeblock(l-1-1-5,stone)
+119: SHOP_methodbuild-row-2_7_precondition(l-1-3-5,n4,n,l-1-2-5,n3)
+120: SHOP_methodplace-block-abstract-1_9_precondition(l-1-2-5)
+121: placeblock(l-1-2-5,stone)
+122: SHOP_methodbuild-row-2_7_precondition(l-1-4-5,n3,n,l-1-3-5,n2)
+123: SHOP_methodplace-block-abstract-1_9_precondition(l-1-3-5)
+124: placeblock(l-1-3-5,stone)
+125: SHOP_methodbuild-row-2_7_precondition(l-1-5-5,n2,n,l-1-4-5,n1)
+126: SHOP_methodplace-block-abstract-1_9_precondition(l-1-4-5)
+127: placeblock(l-1-4-5,stone)
+128: SHOP_methodbuild-row-1_6_precondition(n1)
+129: SHOP_methodplace-block-abstract-1_9_precondition(l-1-5-5)
+130: placeblock(l-1-5-5,stone)
+131: SHOP_methodplace-block-abstract-2_10_precondition(l-1-0-5,stone)
+132: SHOP_methodbuild-wall-2_2_precondition(n5,n4,l-2-0-5,l-3-0-5)
+133: SHOP_methodbuild-row-2_7_precondition(l-2-1-5,n6,n,l-2-0-5,n5)
+134: SHOP_methodplace-block-abstract-2_10_precondition(l-2-0-5,stone)
+135: SHOP_methodbuild-row-2_7_precondition(l-2-2-5,n5,n,l-2-1-5,n4)
+136: SHOP_methodplace-block-abstract-1_9_precondition(l-2-1-5)
+137: placeblock(l-2-1-5,stone)
+138: SHOP_methodbuild-row-2_7_precondition(l-2-3-5,n4,n,l-2-2-5,n3)
+139: SHOP_methodplace-block-abstract-1_9_precondition(l-2-2-5)
+140: placeblock(l-2-2-5,stone)
+141: SHOP_methodbuild-row-2_7_precondition(l-2-4-5,n3,n,l-2-3-5,n2)
+142: SHOP_methodplace-block-abstract-1_9_precondition(l-2-3-5)
+143: placeblock(l-2-3-5,stone)
+144: SHOP_methodbuild-row-2_7_precondition(l-2-5-5,n2,n,l-2-4-5,n1)
+145: SHOP_methodplace-block-abstract-1_9_precondition(l-2-4-5)
+146: placeblock(l-2-4-5,stone)
+147: SHOP_methodbuild-row-1_6_precondition(n1)
+148: SHOP_methodplace-block-abstract-1_9_precondition(l-2-5-5)
+149: placeblock(l-2-5-5,stone)
+150: SHOP_methodbuild-wall-2_2_precondition(n4,n3,l-3-0-5,l-4-0-5)
+151: SHOP_methodbuild-row-2_7_precondition(l-3-1-5,n6,n,l-3-0-5,n5)
+152: SHOP_methodplace-block-abstract-2_10_precondition(l-3-0-5,stone)
+153: SHOP_methodbuild-row-2_7_precondition(l-3-2-5,n5,n,l-3-1-5,n4)
+154: SHOP_methodplace-block-abstract-1_9_precondition(l-3-1-5)
+155: placeblock(l-3-1-5,stone)
+156: SHOP_methodbuild-row-2_7_precondition(l-3-3-5,n4,n,l-3-2-5,n3)
+157: SHOP_methodplace-block-abstract-1_9_precondition(l-3-2-5)
+158: placeblock(l-3-2-5,stone)
+159: SHOP_methodbuild-row-2_7_precondition(l-3-4-5,n3,n,l-3-3-5,n2)
+160: SHOP_methodplace-block-abstract-1_9_precondition(l-3-3-5)
+161: placeblock(l-3-3-5,stone)
+162: SHOP_methodbuild-row-2_7_precondition(l-3-5-5,n2,n,l-3-4-5,n1)
+163: SHOP_methodplace-block-abstract-1_9_precondition(l-3-4-5)
+164: placeblock(l-3-4-5,stone)
+165: SHOP_methodbuild-row-1_6_precondition(n1)
+166: SHOP_methodplace-block-abstract-1_9_precondition(l-3-5-5)
+167: placeblock(l-3-5-5,stone)
+168: SHOP_methodbuild-wall-2_2_precondition(n3,n2,l-4-0-5,l-5-0-5)
+169: SHOP_methodbuild-row-2_7_precondition(l-4-1-5,n6,n,l-4-0-5,n5)
+170: SHOP_methodplace-block-abstract-2_10_precondition(l-4-0-5,stone)
+171: SHOP_methodbuild-row-2_7_precondition(l-4-2-5,n5,n,l-4-1-5,n4)
+172: SHOP_methodplace-block-abstract-1_9_precondition(l-4-1-5)
+173: placeblock(l-4-1-5,stone)
+174: SHOP_methodbuild-row-2_7_precondition(l-4-3-5,n4,n,l-4-2-5,n3)
+175: SHOP_methodplace-block-abstract-1_9_precondition(l-4-2-5)
+176: placeblock(l-4-2-5,stone)
+177: SHOP_methodbuild-row-2_7_precondition(l-4-4-5,n3,n,l-4-3-5,n2)
+178: SHOP_methodplace-block-abstract-1_9_precondition(l-4-3-5)
+179: placeblock(l-4-3-5,stone)
+180: SHOP_methodbuild-row-2_7_precondition(l-4-5-5,n2,n,l-4-4-5,n1)
+181: SHOP_methodplace-block-abstract-1_9_precondition(l-4-4-5)
+182: placeblock(l-4-4-5,stone)
+183: SHOP_methodbuild-row-1_6_precondition(n1)
+184: SHOP_methodplace-block-abstract-1_9_precondition(l-4-5-5)
+185: placeblock(l-4-5-5,stone)
+186: SHOP_methodbuild-wall-2_2_precondition(n2,n1,l-5-0-5,l-6-0-5)
+187: SHOP_methodbuild-row-2_7_precondition(l-5-1-5,n6,n,l-5-0-5,n5)
+188: SHOP_methodplace-block-abstract-2_10_precondition(l-5-0-5,stone)
+189: SHOP_methodbuild-row-2_7_precondition(l-5-2-5,n5,n,l-5-1-5,n4)
+190: SHOP_methodplace-block-abstract-1_9_precondition(l-5-1-5)
+191: placeblock(l-5-1-5,stone)
+192: SHOP_methodbuild-row-2_7_precondition(l-5-3-5,n4,n,l-5-2-5,n3)
+193: SHOP_methodplace-block-abstract-1_9_precondition(l-5-2-5)
+194: placeblock(l-5-2-5,stone)
+195: SHOP_methodbuild-row-2_7_precondition(l-5-4-5,n3,n,l-5-3-5,n2)
+196: SHOP_methodplace-block-abstract-1_9_precondition(l-5-3-5)
+197: placeblock(l-5-3-5,stone)
+198: SHOP_methodbuild-row-2_7_precondition(l-5-5-5,n2,n,l-5-4-5,n1)
+199: SHOP_methodplace-block-abstract-1_9_precondition(l-5-4-5)
+200: placeblock(l-5-4-5,stone)
+201: SHOP_methodbuild-row-1_6_precondition(n1)
+202: SHOP_methodplace-block-abstract-1_9_precondition(l-5-5-5)
+203: placeblock(l-5-5-5,stone)
+204: SHOP_methodbuild-wall-1_1_precondition(n1)
+205: SHOP_methodbuild-row-2_7_precondition(l-6-1-5,n6,n,l-6-0-5,n5)
+206: SHOP_methodplace-block-abstract-2_10_precondition(l-6-0-5,stone)
+207: SHOP_methodbuild-row-2_7_precondition(l-6-2-5,n5,n,l-6-1-5,n4)
+208: SHOP_methodplace-block-abstract-1_9_precondition(l-6-1-5)
+209: placeblock(l-6-1-5,stone)
+210: SHOP_methodbuild-row-2_7_precondition(l-6-3-5,n4,n,l-6-2-5,n3)
+211: SHOP_methodplace-block-abstract-1_9_precondition(l-6-2-5)
+212: placeblock(l-6-2-5,stone)
+213: SHOP_methodbuild-row-2_7_precondition(l-6-4-5,n3,n,l-6-3-5,n2)
+214: SHOP_methodplace-block-abstract-1_9_precondition(l-6-3-5)
+215: placeblock(l-6-3-5,stone)
+216: SHOP_methodbuild-row-3_8_precondition(n,n1,n2,l-6-4-5,l-6-5-5)
+217: SHOP_methodbuild-row-1_6_precondition(n1)
+218: SHOP_methodplace-block-abstract-1_9_precondition(l-6-5-5)
+219: placeblock(l-6-5-5,stone)
+220: SHOP_methodplace-block-abstract-1_9_precondition(l-6-4-5)
+221: placeblock(l-6-4-5,stone)
+222: SHOP_methodbuild-wall-2_2_precondition(n6,n5,l-1-5-5,l-2-5-5)
+223: SHOP_methodbuild-row-3_8_precondition(w,n5,n6,l-1-5-5,l-1-5-4)
+224: SHOP_methodbuild-row-3_8_precondition(w,n4,n5,l-1-5-4,l-1-5-3)
+225: SHOP_methodbuild-row-2_7_precondition(l-1-5-2,n4,w,l-1-5-3,n3)
+226: SHOP_methodplace-block-abstract-1_9_precondition(l-1-5-3)
+227: placeblock(l-1-5-3,stone)
+228: SHOP_methodbuild-row-2_7_precondition(l-1-5-1,n3,w,l-1-5-2,n2)
+229: SHOP_methodplace-block-abstract-1_9_precondition(l-1-5-2)
+230: placeblock(l-1-5-2,stone)
+231: SHOP_methodbuild-row-2_7_precondition(l-1-5-0,n2,w,l-1-5-1,n1)
+232: SHOP_methodplace-block-abstract-1_9_precondition(l-1-5-1)
+233: placeblock(l-1-5-1,stone)
+234: SHOP_methodbuild-row-1_6_precondition(n1)
+235: SHOP_methodplace-block-abstract-1_9_precondition(l-1-5-0)
+236: placeblock(l-1-5-0,stone)
+237: SHOP_methodplace-block-abstract-1_9_precondition(l-1-5-4)
+238: placeblock(l-1-5-4,stone)
+239: SHOP_methodplace-block-abstract-2_10_precondition(l-1-5-5,stone)
+240: SHOP_methodbuild-wall-2_2_precondition(n5,n4,l-2-5-5,l-3-5-5)
+241: SHOP_methodbuild-row-2_7_precondition(l-2-5-4,n6,w,l-2-5-5,n5)
+242: SHOP_methodplace-block-abstract-2_10_precondition(l-2-5-5,stone)
+243: SHOP_methodbuild-row-2_7_precondition(l-2-5-3,n5,w,l-2-5-4,n4)
+244: SHOP_methodplace-block-abstract-1_9_precondition(l-2-5-4)
+245: placeblock(l-2-5-4,stone)
+246: SHOP_methodbuild-row-2_7_precondition(l-2-5-2,n4,w,l-2-5-3,n3)
+247: SHOP_methodplace-block-abstract-1_9_precondition(l-2-5-3)
+248: placeblock(l-2-5-3,stone)
+249: SHOP_methodbuild-row-2_7_precondition(l-2-5-1,n3,w,l-2-5-2,n2)
+250: SHOP_methodplace-block-abstract-1_9_precondition(l-2-5-2)
+251: placeblock(l-2-5-2,stone)
+252: SHOP_methodbuild-row-2_7_precondition(l-2-5-0,n2,w,l-2-5-1,n1)
+253: SHOP_methodplace-block-abstract-1_9_precondition(l-2-5-1)
+254: placeblock(l-2-5-1,stone)
+255: SHOP_methodbuild-row-1_6_precondition(n1)
+256: SHOP_methodplace-block-abstract-1_9_precondition(l-2-5-0)
+257: placeblock(l-2-5-0,stone)
+258: SHOP_methodbuild-wall-2_2_precondition(n4,n3,l-3-5-5,l-4-5-5)
+259: SHOP_methodbuild-row-3_8_precondition(w,n5,n6,l-3-5-5,l-3-5-4)
+260: SHOP_methodbuild-row-2_7_precondition(l-3-5-3,n5,w,l-3-5-4,n4)
+261: SHOP_methodplace-block-abstract-1_9_precondition(l-3-5-4)
+262: placeblock(l-3-5-4,stone)
+263: SHOP_methodbuild-row-2_7_precondition(l-3-5-2,n4,w,l-3-5-3,n3)
+264: SHOP_methodplace-block-abstract-1_9_precondition(l-3-5-3)
+265: placeblock(l-3-5-3,stone)
+266: SHOP_methodbuild-row-2_7_precondition(l-3-5-1,n3,w,l-3-5-2,n2)
+267: SHOP_methodplace-block-abstract-1_9_precondition(l-3-5-2)
+268: placeblock(l-3-5-2,stone)
+269: SHOP_methodbuild-row-2_7_precondition(l-3-5-0,n2,w,l-3-5-1,n1)
+270: SHOP_methodplace-block-abstract-1_9_precondition(l-3-5-1)
+271: placeblock(l-3-5-1,stone)
+272: SHOP_methodbuild-row-1_6_precondition(n1)
+273: SHOP_methodplace-block-abstract-1_9_precondition(l-3-5-0)
+274: placeblock(l-3-5-0,stone)
+275: SHOP_methodplace-block-abstract-2_10_precondition(l-3-5-5,stone)
+276: SHOP_methodbuild-wall-2_2_precondition(n3,n2,l-4-5-5,l-5-5-5)
+277: SHOP_methodbuild-row-3_8_precondition(w,n5,n6,l-4-5-5,l-4-5-4)
+278: SHOP_methodbuild-row-2_7_precondition(l-4-5-3,n5,w,l-4-5-4,n4)
+279: SHOP_methodplace-block-abstract-1_9_precondition(l-4-5-4)
+280: placeblock(l-4-5-4,stone)
+281: SHOP_methodbuild-row-2_7_precondition(l-4-5-2,n4,w,l-4-5-3,n3)
+282: SHOP_methodplace-block-abstract-1_9_precondition(l-4-5-3)
+283: placeblock(l-4-5-3,stone)
+284: SHOP_methodbuild-row-2_7_precondition(l-4-5-1,n3,w,l-4-5-2,n2)
+285: SHOP_methodplace-block-abstract-1_9_precondition(l-4-5-2)
+286: placeblock(l-4-5-2,stone)
+287: SHOP_methodbuild-row-2_7_precondition(l-4-5-0,n2,w,l-4-5-1,n1)
+288: SHOP_methodplace-block-abstract-1_9_precondition(l-4-5-1)
+289: placeblock(l-4-5-1,stone)
+290: SHOP_methodbuild-row-1_6_precondition(n1)
+291: SHOP_methodplace-block-abstract-1_9_precondition(l-4-5-0)
+292: placeblock(l-4-5-0,stone)
+293: SHOP_methodplace-block-abstract-2_10_precondition(l-4-5-5,stone)
+294: SHOP_methodbuild-wall-2_2_precondition(n2,n1,l-5-5-5,l-6-5-5)
+295: SHOP_methodbuild-row-2_7_precondition(l-5-5-4,n6,w,l-5-5-5,n5)
+296: SHOP_methodplace-block-abstract-2_10_precondition(l-5-5-5,stone)
+297: SHOP_methodbuild-row-2_7_precondition(l-5-5-3,n5,w,l-5-5-4,n4)
+298: SHOP_methodplace-block-abstract-1_9_precondition(l-5-5-4)
+299: placeblock(l-5-5-4,stone)
+300: SHOP_methodbuild-row-2_7_precondition(l-5-5-2,n4,w,l-5-5-3,n3)
+301: SHOP_methodplace-block-abstract-1_9_precondition(l-5-5-3)
+302: placeblock(l-5-5-3,stone)
+303: SHOP_methodbuild-row-2_7_precondition(l-5-5-1,n3,w,l-5-5-2,n2)
+304: SHOP_methodplace-block-abstract-1_9_precondition(l-5-5-2)
+305: placeblock(l-5-5-2,stone)
+306: SHOP_methodbuild-row-2_7_precondition(l-5-5-0,n2,w,l-5-5-1,n1)
+307: SHOP_methodplace-block-abstract-1_9_precondition(l-5-5-1)
+308: placeblock(l-5-5-1,stone)
+309: SHOP_methodbuild-row-1_6_precondition(n1)
+310: SHOP_methodplace-block-abstract-1_9_precondition(l-5-5-0)
+311: placeblock(l-5-5-0,stone)
+312: SHOP_methodbuild-wall-1_1_precondition(n1)
+313: SHOP_methodbuild-row-3_8_precondition(w,n5,n6,l-6-5-5,l-6-5-4)
+314: SHOP_methodbuild-row-3_8_precondition(w,n4,n5,l-6-5-4,l-6-5-3)
+315: SHOP_methodbuild-row-2_7_precondition(l-6-5-2,n4,w,l-6-5-3,n3)
+316: SHOP_methodplace-block-abstract-1_9_precondition(l-6-5-3)
+317: placeblock(l-6-5-3,stone)
+318: SHOP_methodbuild-row-2_7_precondition(l-6-5-1,n3,w,l-6-5-2,n2)
+319: SHOP_methodplace-block-abstract-1_9_precondition(l-6-5-2)
+320: placeblock(l-6-5-2,stone)
+321: SHOP_methodbuild-row-2_7_precondition(l-6-5-0,n2,w,l-6-5-1,n1)
+322: SHOP_methodplace-block-abstract-1_9_precondition(l-6-5-1)
+323: placeblock(l-6-5-1,stone)
+324: SHOP_methodbuild-row-1_6_precondition(n1)
+325: SHOP_methodplace-block-abstract-1_9_precondition(l-6-5-0)
+326: placeblock(l-6-5-0,stone)
+327: SHOP_methodplace-block-abstract-1_9_precondition(l-6-5-4)
+328: placeblock(l-6-5-4,stone)
+329: SHOP_methodplace-block-abstract-2_10_precondition(l-6-5-5,stone)
+330: SHOP_methodbuild-wall-2_2_precondition(n6,n5,l-1-5-0,l-2-5-0)
+331: SHOP_methodbuild-row-3_8_precondition(s,n5,n6,l-1-5-0,l-1-4-0)
+332: SHOP_methodbuild-row-2_7_precondition(l-1-3-0,n5,s,l-1-4-0,n4)
+333: SHOP_methodplace-block-abstract-1_9_precondition(l-1-4-0)
+334: placeblock(l-1-4-0,stone)
+335: SHOP_methodbuild-row-2_7_precondition(l-1-2-0,n4,s,l-1-3-0,n3)
+336: SHOP_methodplace-block-abstract-1_9_precondition(l-1-3-0)
+337: placeblock(l-1-3-0,stone)
+338: SHOP_methodbuild-row-3_8_precondition(s,n2,n3,l-1-2-0,l-1-1-0)
+339: SHOP_methodbuild-row-2_7_precondition(l-1-0-0,n2,s,l-1-1-0,n1)
+340: SHOP_methodplace-block-abstract-1_9_precondition(l-1-1-0)
+341: placeblock(l-1-1-0,stone)
+342: SHOP_methodbuild-row-1_6_precondition(n1)
+343: SHOP_methodplace-block-abstract-2_10_precondition(l-1-0-0,stone)
+344: SHOP_methodplace-block-abstract-1_9_precondition(l-1-2-0)
+345: placeblock(l-1-2-0,stone)
+346: SHOP_methodplace-block-abstract-2_10_precondition(l-1-5-0,stone)
+347: SHOP_methodbuild-wall-2_2_precondition(n5,n4,l-2-5-0,l-3-5-0)
+348: SHOP_methodbuild-row-2_7_precondition(l-2-4-0,n6,s,l-2-5-0,n5)
+349: SHOP_methodplace-block-abstract-2_10_precondition(l-2-5-0,stone)
+350: SHOP_methodbuild-row-3_8_precondition(s,n4,n5,l-2-4-0,l-2-3-0)
+351: SHOP_methodbuild-row-2_7_precondition(l-2-2-0,n4,s,l-2-3-0,n3)
+352: SHOP_methodplace-block-abstract-1_9_precondition(l-2-3-0)
+353: placeblock(l-2-3-0,stone)
+354: SHOP_methodbuild-row-3_8_precondition(s,n2,n3,l-2-2-0,l-2-1-0)
+355: SHOP_methodbuild-row-2_7_precondition(l-2-0-0,n2,s,l-2-1-0,n1)
+356: SHOP_methodplace-block-abstract-1_9_precondition(l-2-1-0)
+357: placeblock(l-2-1-0,stone)
+358: SHOP_methodbuild-row-1_6_precondition(n1)
+359: SHOP_methodplace-block-abstract-2_10_precondition(l-2-0-0,stone)
+360: SHOP_methodplace-block-abstract-1_9_precondition(l-2-2-0)
+361: placeblock(l-2-2-0,stone)
+362: SHOP_methodplace-block-abstract-1_9_precondition(l-2-4-0)
+363: placeblock(l-2-4-0,stone)
+364: SHOP_methodbuild-wall-2_2_precondition(n4,n3,l-3-5-0,l-4-5-0)
+365: SHOP_methodbuild-row-3_8_precondition(s,n5,n6,l-3-5-0,l-3-4-0)
+366: SHOP_methodbuild-row-2_7_precondition(l-3-3-0,n5,s,l-3-4-0,n4)
+367: SHOP_methodplace-block-abstract-1_9_precondition(l-3-4-0)
+368: placeblock(l-3-4-0,stone)
+369: SHOP_methodbuild-row-2_7_precondition(l-3-2-0,n4,s,l-3-3-0,n3)
+370: SHOP_methodplace-block-abstract-1_9_precondition(l-3-3-0)
+371: placeblock(l-3-3-0,stone)
+372: SHOP_methodbuild-row-2_7_precondition(l-3-1-0,n3,s,l-3-2-0,n2)
+373: SHOP_methodplace-block-abstract-1_9_precondition(l-3-2-0)
+374: placeblock(l-3-2-0,stone)
+375: SHOP_methodbuild-row-2_7_precondition(l-3-0-0,n2,s,l-3-1-0,n1)
+376: SHOP_methodplace-block-abstract-1_9_precondition(l-3-1-0)
+377: placeblock(l-3-1-0,stone)
+378: SHOP_methodbuild-row-1_6_precondition(n1)
+379: SHOP_methodplace-block-abstract-2_10_precondition(l-3-0-0,stone)
+380: SHOP_methodplace-block-abstract-2_10_precondition(l-3-5-0,stone)
+381: SHOP_methodbuild-wall-2_2_precondition(n3,n2,l-4-5-0,l-5-5-0)
+382: SHOP_methodbuild-row-2_7_precondition(l-4-4-0,n6,s,l-4-5-0,n5)
+383: SHOP_methodplace-block-abstract-2_10_precondition(l-4-5-0,stone)
+384: SHOP_methodbuild-row-2_7_precondition(l-4-3-0,n5,s,l-4-4-0,n4)
+385: SHOP_methodplace-block-abstract-1_9_precondition(l-4-4-0)
+386: placeblock(l-4-4-0,stone)
+387: SHOP_methodbuild-row-2_7_precondition(l-4-2-0,n4,s,l-4-3-0,n3)
+388: SHOP_methodplace-block-abstract-1_9_precondition(l-4-3-0)
+389: placeblock(l-4-3-0,stone)
+390: SHOP_methodbuild-row-2_7_precondition(l-4-1-0,n3,s,l-4-2-0,n2)
+391: SHOP_methodplace-block-abstract-1_9_precondition(l-4-2-0)
+392: placeblock(l-4-2-0,stone)
+393: SHOP_methodbuild-row-2_7_precondition(l-4-0-0,n2,s,l-4-1-0,n1)
+394: SHOP_methodplace-block-abstract-1_9_precondition(l-4-1-0)
+395: placeblock(l-4-1-0,stone)
+396: SHOP_methodbuild-row-1_6_precondition(n1)
+397: SHOP_methodplace-block-abstract-2_10_precondition(l-4-0-0,stone)
+398: SHOP_methodbuild-wall-2_2_precondition(n2,n1,l-5-5-0,l-6-5-0)
+399: SHOP_methodbuild-row-3_8_precondition(s,n5,n6,l-5-5-0,l-5-4-0)
+400: SHOP_methodbuild-row-2_7_precondition(l-5-3-0,n5,s,l-5-4-0,n4)
+401: SHOP_methodplace-block-abstract-1_9_precondition(l-5-4-0)
+402: placeblock(l-5-4-0,stone)
+403: SHOP_methodbuild-row-2_7_precondition(l-5-2-0,n4,s,l-5-3-0,n3)
+404: SHOP_methodplace-block-abstract-1_9_precondition(l-5-3-0)
+405: placeblock(l-5-3-0,stone)
+406: SHOP_methodbuild-row-2_7_precondition(l-5-1-0,n3,s,l-5-2-0,n2)
+407: SHOP_methodplace-block-abstract-1_9_precondition(l-5-2-0)
+408: placeblock(l-5-2-0,stone)
+409: SHOP_methodbuild-row-2_7_precondition(l-5-0-0,n2,s,l-5-1-0,n1)
+410: SHOP_methodplace-block-abstract-1_9_precondition(l-5-1-0)
+411: placeblock(l-5-1-0,stone)
+412: SHOP_methodbuild-row-1_6_precondition(n1)
+413: SHOP_methodplace-block-abstract-2_10_precondition(l-5-0-0,stone)
+414: SHOP_methodplace-block-abstract-2_10_precondition(l-5-5-0,stone)
+415: SHOP_methodbuild-wall-1_1_precondition(n1)
+416: SHOP_methodbuild-row-3_8_precondition(s,n5,n6,l-6-5-0,l-6-4-0)
+417: SHOP_methodbuild-row-3_8_precondition(s,n4,n5,l-6-4-0,l-6-3-0)
+418: SHOP_methodbuild-row-2_7_precondition(l-6-2-0,n4,s,l-6-3-0,n3)
+419: SHOP_methodplace-block-abstract-1_9_precondition(l-6-3-0)
+420: placeblock(l-6-3-0,stone)
+421: SHOP_methodbuild-row-2_7_precondition(l-6-1-0,n3,s,l-6-2-0,n2)
+422: SHOP_methodplace-block-abstract-1_9_precondition(l-6-2-0)
+423: placeblock(l-6-2-0,stone)
+424: SHOP_methodbuild-row-2_7_precondition(l-6-0-0,n2,s,l-6-1-0,n1)
+425: SHOP_methodplace-block-abstract-1_9_precondition(l-6-1-0)
+426: placeblock(l-6-1-0,stone)
+427: SHOP_methodbuild-row-1_6_precondition(n1)
+428: SHOP_methodplace-block-abstract-2_10_precondition(l-6-0-0,stone)
+429: SHOP_methodplace-block-abstract-1_9_precondition(l-6-4-0)
+430: placeblock(l-6-4-0,stone)
+431: SHOP_methodplace-block-abstract-2_10_precondition(l-6-5-0,stone)
+432: SHOP_methodbuild-door-1_5_precondition(l-1-2-0,l-2-2-0)
+433: SHOP_methodremove-block-abstract-2_13_precondition(l-1-2-0,stone)
+434: removeblock(l-1-2-0,stone)
+435: SHOP_methodremove-block-abstract-2_13_precondition(l-2-2-0,stone)
+436: removeblock(l-2-2-0,stone)
+437: SHOP_methodbuild-roof-2_4_precondition(n5,n,l-7-1-0,l-7-0-0,n6)
+438: SHOP_methodbuild-row-3_8_precondition(e,n5,n6,l-7-0-0,l-7-0-1)
+439: SHOP_methodbuild-row-2_7_precondition(l-7-0-2,n5,e,l-7-0-1,n4)
+440: SHOP_methodplace-block-abstract-1_9_precondition(l-7-0-1)
+441: placeblock(l-7-0-1,stone)
+442: SHOP_methodbuild-row-2_7_precondition(l-7-0-3,n4,e,l-7-0-2,n3)
+443: SHOP_methodplace-block-abstract-1_9_precondition(l-7-0-2)
+444: placeblock(l-7-0-2,stone)
+445: SHOP_methodbuild-row-2_7_precondition(l-7-0-4,n3,e,l-7-0-3,n2)
+446: SHOP_methodplace-block-abstract-1_9_precondition(l-7-0-3)
+447: placeblock(l-7-0-3,stone)
+448: SHOP_methodbuild-row-2_7_precondition(l-7-0-5,n2,e,l-7-0-4,n1)
+449: SHOP_methodplace-block-abstract-1_9_precondition(l-7-0-4)
+450: placeblock(l-7-0-4,stone)
+451: SHOP_methodbuild-row-1_6_precondition(n1)
+452: SHOP_methodplace-block-abstract-1_9_precondition(l-7-0-5)
+453: placeblock(l-7-0-5,stone)
+454: SHOP_methodplace-block-abstract-1_9_precondition(l-7-0-0)
+455: placeblock(l-7-0-0,stone)
+456: SHOP_methodbuild-roof-2_4_precondition(n4,n,l-7-2-0,l-7-1-0,n5)
+457: SHOP_methodbuild-row-2_7_precondition(l-7-1-1,n6,e,l-7-1-0,n5)
+458: SHOP_methodplace-block-abstract-1_9_precondition(l-7-1-0)
+459: placeblock(l-7-1-0,stone)
+460: SHOP_methodbuild-row-2_7_precondition(l-7-1-2,n5,e,l-7-1-1,n4)
+461: SHOP_methodplace-block-abstract-1_9_precondition(l-7-1-1)
+462: placeblock(l-7-1-1,stone)
+463: SHOP_methodbuild-row-2_7_precondition(l-7-1-3,n4,e,l-7-1-2,n3)
+464: SHOP_methodplace-block-abstract-1_9_precondition(l-7-1-2)
+465: placeblock(l-7-1-2,stone)
+466: SHOP_methodbuild-row-2_7_precondition(l-7-1-4,n3,e,l-7-1-3,n2)
+467: SHOP_methodplace-block-abstract-1_9_precondition(l-7-1-3)
+468: placeblock(l-7-1-3,stone)
+469: SHOP_methodbuild-row-2_7_precondition(l-7-1-5,n2,e,l-7-1-4,n1)
+470: SHOP_methodplace-block-abstract-1_9_precondition(l-7-1-4)
+471: placeblock(l-7-1-4,stone)
+472: SHOP_methodbuild-row-1_6_precondition(n1)
+473: SHOP_methodplace-block-abstract-1_9_precondition(l-7-1-5)
+474: placeblock(l-7-1-5,stone)
+475: SHOP_methodbuild-roof-2_4_precondition(n3,n,l-7-3-0,l-7-2-0,n4)
+476: SHOP_methodbuild-row-2_7_precondition(l-7-2-1,n6,e,l-7-2-0,n5)
+477: SHOP_methodplace-block-abstract-1_9_precondition(l-7-2-0)
+478: placeblock(l-7-2-0,stone)
+479: SHOP_methodbuild-row-3_8_precondition(e,n4,n5,l-7-2-1,l-7-2-2)
+480: SHOP_methodbuild-row-2_7_precondition(l-7-2-3,n4,e,l-7-2-2,n3)
+481: SHOP_methodplace-block-abstract-1_9_precondition(l-7-2-2)
+482: placeblock(l-7-2-2,stone)
+483: SHOP_methodbuild-row-2_7_precondition(l-7-2-4,n3,e,l-7-2-3,n2)
+484: SHOP_methodplace-block-abstract-1_9_precondition(l-7-2-3)
+485: placeblock(l-7-2-3,stone)
+486: SHOP_methodbuild-row-2_7_precondition(l-7-2-5,n2,e,l-7-2-4,n1)
+487: SHOP_methodplace-block-abstract-1_9_precondition(l-7-2-4)
+488: placeblock(l-7-2-4,stone)
+489: SHOP_methodbuild-row-1_6_precondition(n1)
+490: SHOP_methodplace-block-abstract-1_9_precondition(l-7-2-5)
+491: placeblock(l-7-2-5,stone)
+492: SHOP_methodplace-block-abstract-1_9_precondition(l-7-2-1)
+493: placeblock(l-7-2-1,stone)
+494: SHOP_methodbuild-roof-2_4_precondition(n2,n,l-7-4-0,l-7-3-0,n3)
+495: SHOP_methodbuild-row-2_7_precondition(l-7-3-1,n6,e,l-7-3-0,n5)
+496: SHOP_methodplace-block-abstract-1_9_precondition(l-7-3-0)
+497: placeblock(l-7-3-0,stone)
+498: SHOP_methodbuild-row-2_7_precondition(l-7-3-2,n5,e,l-7-3-1,n4)
+499: SHOP_methodplace-block-abstract-1_9_precondition(l-7-3-1)
+500: placeblock(l-7-3-1,stone)
+501: SHOP_methodbuild-row-2_7_precondition(l-7-3-3,n4,e,l-7-3-2,n3)
+502: SHOP_methodplace-block-abstract-1_9_precondition(l-7-3-2)
+503: placeblock(l-7-3-2,stone)
+504: SHOP_methodbuild-row-2_7_precondition(l-7-3-4,n3,e,l-7-3-3,n2)
+505: SHOP_methodplace-block-abstract-1_9_precondition(l-7-3-3)
+506: placeblock(l-7-3-3,stone)
+507: SHOP_methodbuild-row-2_7_precondition(l-7-3-5,n2,e,l-7-3-4,n1)
+508: SHOP_methodplace-block-abstract-1_9_precondition(l-7-3-4)
+509: placeblock(l-7-3-4,stone)
+510: SHOP_methodbuild-row-1_6_precondition(n1)
+511: SHOP_methodplace-block-abstract-1_9_precondition(l-7-3-5)
+512: placeblock(l-7-3-5,stone)
+513: SHOP_methodbuild-roof-2_4_precondition(n1,n,l-7-5-0,l-7-4-0,n2)
+514: SHOP_methodbuild-row-3_8_precondition(e,n5,n6,l-7-4-0,l-7-4-1)
+515: SHOP_methodbuild-row-2_7_precondition(l-7-4-2,n5,e,l-7-4-1,n4)
+516: SHOP_methodplace-block-abstract-1_9_precondition(l-7-4-1)
+517: placeblock(l-7-4-1,stone)
+518: SHOP_methodbuild-row-3_8_precondition(e,n3,n4,l-7-4-2,l-7-4-3)
+519: SHOP_methodbuild-row-2_7_precondition(l-7-4-4,n3,e,l-7-4-3,n2)
+520: SHOP_methodplace-block-abstract-1_9_precondition(l-7-4-3)
+521: placeblock(l-7-4-3,stone)
+522: SHOP_methodbuild-row-2_7_precondition(l-7-4-5,n2,e,l-7-4-4,n1)
+523: SHOP_methodplace-block-abstract-1_9_precondition(l-7-4-4)
+524: placeblock(l-7-4-4,stone)
+525: SHOP_methodbuild-row-1_6_precondition(n1)
+526: SHOP_methodplace-block-abstract-1_9_precondition(l-7-4-5)
+527: placeblock(l-7-4-5,stone)
+528: SHOP_methodplace-block-abstract-1_9_precondition(l-7-4-2)
+529: placeblock(l-7-4-2,stone)
+530: SHOP_methodplace-block-abstract-1_9_precondition(l-7-4-0)
+531: placeblock(l-7-4-0,stone)
+532: SHOP_methodbuild-roof-1_3_precondition(n1)
+533: SHOP_methodbuild-row-2_7_precondition(l-7-5-1,n6,e,l-7-5-0,n5)
+534: SHOP_methodplace-block-abstract-1_9_precondition(l-7-5-0)
+535: placeblock(l-7-5-0,stone)
+536: SHOP_methodbuild-row-2_7_precondition(l-7-5-2,n5,e,l-7-5-1,n4)
+537: SHOP_methodplace-block-abstract-1_9_precondition(l-7-5-1)
+538: placeblock(l-7-5-1,stone)
+539: SHOP_methodbuild-row-2_7_precondition(l-7-5-3,n4,e,l-7-5-2,n3)
+540: SHOP_methodplace-block-abstract-1_9_precondition(l-7-5-2)
+541: placeblock(l-7-5-2,stone)
+542: SHOP_methodbuild-row-2_7_precondition(l-7-5-4,n3,e,l-7-5-3,n2)
+543: SHOP_methodplace-block-abstract-1_9_precondition(l-7-5-3)
+544: placeblock(l-7-5-3,stone)
+545: SHOP_methodbuild-row-2_7_precondition(l-7-5-5,n2,e,l-7-5-4,n1)
+546: SHOP_methodplace-block-abstract-1_9_precondition(l-7-5-4)
+547: placeblock(l-7-5-4,stone)
+548: SHOP_methodbuild-row-1_6_precondition(n1)
+549: SHOP_methodplace-block-abstract-1_9_precondition(l-7-5-5)
+550: placeblock(l-7-5-5,stone)

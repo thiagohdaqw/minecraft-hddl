@@ -32,7 +32,7 @@ class Voxel(Button):
         )
 
 
-player = FirstPersonController(z=-5, x=-5)
+player = FirstPersonController(z=-10)
 editor_camera = EditorCamera(enabled=False)
 
 world = {}
