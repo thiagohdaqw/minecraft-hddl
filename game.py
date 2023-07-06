@@ -16,7 +16,7 @@ window.title = "Minecraft HDDL"
 
 Entity.default_shader = lit_with_shadows_shader
 ground = Entity(
-    model="plane", collider="box", scale=64, texture="grass", texture_scale=(4, 4), y=-1
+    model="plane", collider="box", scale=64, texture="grass", texture_scale=(64, 64), y=-1
 )
 Sky()
 
@@ -35,6 +35,14 @@ class Voxel(Button):
 
 
 player = FirstPersonController(z=-10)
+arm = Entity(
+  parent=camera.ui,
+  model='cube',
+  color=color.blue,
+  position=(0.75, -0.6),
+  rotation= (150, -10,6),
+  scale = (0.2,0.2,2)
+)
 editor_camera = EditorCamera(enabled=False)
 
 world = {}
