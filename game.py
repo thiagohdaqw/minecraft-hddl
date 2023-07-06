@@ -12,15 +12,15 @@ DELAY_CONSTRUCTION = 0.09
 
 app = Ursina()
 
+window.fullscreen = True
 window.title = "Minecraft HDDL"
-
 
 Entity.default_shader = lit_with_shadows_shader
 ground = Entity(
     model="plane",
     collider="box",
     scale=64,
-    texture="grass",
+    texture="textures/grass.jpg",
     texture_scale=(64, 64),
     y=-1,
 )
