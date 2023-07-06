@@ -1,4 +1,7 @@
+import pathlib
+
 from typing import Iterable, Tuple, Union
+
 
 PLACE_BLOCK = "placeblock"
 REMOVE_BLOCK = "removeblock"
@@ -11,8 +14,8 @@ Action = Union[PLACE_BLOCK, REMOVE_BLOCK]
 Location = Tuple[int, int, int]
 
 
-def parse_actions(filename: str) -> Iterable[Tuple[Action, Location, Block]]:
-    with open(filename) as f:
+def parse_actions(filepath: pathlib.Path) -> Iterable[Tuple[Action, Location, Block]]:
+    with open(filepath) as f:
         skip_until_solution(f)
         for line in f:
             index, answer = line.split(": ")
@@ -32,8 +35,8 @@ def skip_until_solution(file):
             return
 
 
-def parse_world(filename: str) -> Iterable[Tuple[Location, Block]]:
-    with open(filename) as file:
+def parse_world(filepath: pathlib.Path) -> Iterable[Tuple[Location, Block]]:
+    with open(filepath) as file:
         for line in file:
             for x in line.split(")"):
                 y = x.split("(")

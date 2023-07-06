@@ -1,4 +1,5 @@
 import sys
+import pathlib
 
 from ursina import *
 from ursina.prefabs.first_person_controller import FirstPersonController
@@ -107,8 +108,8 @@ def apply_action(a):
             print(f"Error: bock at {location} not found in world!")
 
 
-def init_world(hddl_filename: str):
-    for predicate, location, block in planning_parser.parse_world(hddl_filename):
+def init_world(hddl_filepath: pathlib.Path):
+    for predicate, location, block in planning_parser.parse_world(hddl_filepath):
         if predicate == planning_parser.BLOCKAT:
             add_block(location, block)
 
@@ -120,9 +121,11 @@ if __name__ == "__main__":
         print("\nError: filename is required")
         exit(1)
 
-    init_world(f"in/{sys.argv[1].rsplit('/', 1)[1].split('.out')[0]}.hddl")
+    path = pathlib.Path(sys.argv[1])
+    filename = path.stem
+    init_world(path.parent / ".." / "in" / f"{filename}.hddl")
 
-    for index, action in enumerate(planning_parser.parse_actions(sys.argv[1])):
+    for index, action in enumerate(planning_parser.parse_actions(path)):
         invoke(apply_action, action, delay=index * DELAY_CONSTRUCTION)
 
     app.run()
