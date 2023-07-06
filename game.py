@@ -3,7 +3,6 @@ import sys
 from ursina import *
 from ursina.prefabs.first_person_controller import FirstPersonController
 from ursina.shaders import lit_with_shadows_shader
-from PIL import Image
 
 import planning_parser
 
@@ -11,6 +10,9 @@ DELAY_CONSTRUCTION = 0.09
 
 
 app = Ursina()
+
+window.title = "Minecraft HDDL"
+
 
 Entity.default_shader = lit_with_shadows_shader
 ground = Entity(
@@ -38,17 +40,18 @@ editor_camera = EditorCamera(enabled=False)
 world = {}
 
 textures = {
-    'stone': "textures/stone.png",
-    'earth': "textures/earth.png",
-    'wood': "textures/wood.png",
+    "stone": "textures/stone.png",
+    "earth": "textures/earth.png",
+    "wood": "textures/wood.png",
 }
+
 
 def input(key):
     if key == "left mouse down":
-        hit_info = raycast(camera.world_position, camera.forward, distance=5)
+        hit_info = raycast(camera.world_position, camera.forward, distance=10)
         if hit_info.hit:
-            Voxel(position=hit_info.entity.position + hit_info.normal)
-    if key == "right mouse down" and mouse.hovered_entity:
+            Voxel(position=hit_info.entity.position + hit_info.normal, texture=textures['wood'])
+    if key == "right mouse down" and mouse.hovered_entity and mouse.hovered_entity != ground:
         destroy(mouse.hovered_entity)
 
     if key == "e":
@@ -56,6 +59,7 @@ def input(key):
             editor_camera.enable()
         else:
             editor_camera.disable()
+
 
 def add_block(location, block):
     world[location] = Voxel(position=location, texture=textures.get(block, None))
